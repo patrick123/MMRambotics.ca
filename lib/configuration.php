@@ -25,10 +25,10 @@
     
     // General Site
     // Base page title (might be appended or prefixed to).
-    public $base_title        = 'MMRambotics';
+    public $base_title             = 'MMRambotics';
      
     // File Paths
-    public $template_filepath = '/templates'; 
+    public $template_filepath_root = '/templates'; 
      
   }
 
