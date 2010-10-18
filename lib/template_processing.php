@@ -5,6 +5,8 @@
    * @description: Template processing class.
    */
    
+  require(dirname(__FILE__) . '/configuration.php');
+  
   /*
    * Template Processing class feeds an HTML template document and processes it
    * to load any dynamic content.  Dynamic content should be referred within the
@@ -19,7 +21,17 @@
      * extension) to process.
      */
     function __construct($template_name) {
+      $template_file_path = $this->template_path($template_name);
+    }
     
+    /* 
+     * Constructs a template file path from a template name.
+     *
+     * @param [String] template_name The template name.
+     */
+    protected function template_path($template_name) {
+      global $configuration;
+      return $configuration->template_filepath . '/' . $template_name . '.html.template';
     }
     
   }
