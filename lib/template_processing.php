@@ -21,7 +21,7 @@
      * extension) to process.
      */
     public function __construct($template_name) {
-      $template_file_path = $this->template_path($template_name);
+      $this->template_file_path = $this->template_path($template_name);
     }
     
     /*
@@ -34,7 +34,9 @@
      */
     public function generate_with_recommended_filters($title = "") {
       $page = $this->get_raw_template();
-      $this->page_title_filter($title);
+      $page = $this->page_title_filter($page, $title);
+      
+      return $page;
     }
     
     /*
@@ -43,7 +45,7 @@
     protected function get_raw_template() {
       $template = file_get_contents($this->template_file_path);  
       if (!$template) 
-        throw new Exception("Template does not exist.");
+        throw new Exception("Template does not exist.  " . $this->template_file_path);
         
       return $template;
     }
@@ -55,7 +57,7 @@
      */
     protected function template_path($template_name) {
       global $configuration;
-      return $configuration->template_filepath_root . '/' . $template_name . '.html.template';
+      return '.' . $configuration->template_filepath_root . '/' . $template_name . '.html.template';
     }
     
   }
@@ -72,15 +74,22 @@
      * with a prefix and affix to base_title (if passed array).
      */ 
     public function page_title_filter($text, $title = "") {
-      if ($title === "") 
-        $full_title = $configuration->base_title;
-      else if (isString($title)) 
-        $full_title = $title;
-      else if (isArray($title)) 
-        $full_title = $title[0] . $configuration->base_title . $title[1];
-      else
-        throw new Exception("Error with title input.");
+      global $configuration;
       
+      if ($title === "") {
+        $full_title = $configuration->base_title;
+      } else if (is_string($title)) {
+        $full_title = $title;
+      } else if (is_array($title)) {
+        $full_title = $configuration->base_title;
+        if (array_key_exists('prefix', $title))
+          $full_title = $title['prefix'] . $full_title;
+          
+        if (array_key_exists('affix', $title))
+          $full_title = $full_title . $title['affix'];
+      } else {
+        throw new Exception("Error with title input.");
+      }
       
       return str_replace('<<<title>>>', $full_title, $text);
     }
