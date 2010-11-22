@@ -1,0 +1,13 @@
+/* 
+ * @author: MMRambotics
+ * @description: Splash page stylesheet.
+ */
+ 
+ /* ~~~Reset~~~ */
+ * {
+	margin:0px;
+	padding:0px;
+	
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+ }
+ /* ~~~End Reset~~~ */
