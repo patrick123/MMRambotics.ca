@@ -10,6 +10,10 @@
 
 	font-family:Verdana, Helvetica, Arial, sans-serif;
 }
+
+img {
+	border:0px;
+}
 /* ~~~End Reset~~~ */
 
 /* ~~~Global~~~ */
@@ -17,3 +21,29 @@ body {
 	background:#000 url('../images/splash-background.png') no-repeat top center;
 }
 /* ~~~End Global~~~ */
+
+/* ~~~Main Layout~~~ */
+div#container {
+	width:100%;
+	margin-top:210px;
+}
+	div#container div#feeds {
+		margin:0 auto;
+		width:873px;
+	}
+		div#container div#feeds div#news {
+			float:left;
+			width:277px;
+			margin:0px 8px 0px 8px;
+		}
+		div#container div#feeds div#events {
+			width:284px;
+			float:left;
+			margin:0px 8px 0px 0px;
+		}
+		div#container div#feeds div#notices {
+			float:right;
+			width:277px;
+			margin:0px 0px 0px 8px;
+		}
+/* ~~~End Main Layout~~~ */
