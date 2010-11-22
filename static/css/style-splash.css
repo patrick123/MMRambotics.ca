@@ -3,11 +3,17 @@
  * @description: Splash page stylesheet.
  */
  
- /* ~~~Reset~~~ */
- * {
+/* ~~~Reset~~~ */
+* {
 	margin:0px;
 	padding:0px;
-	
+
 	font-family:Verdana, Helvetica, Arial, sans-serif;
- }
- /* ~~~End Reset~~~ */
+}
+/* ~~~End Reset~~~ */
+
+/* ~~~Global~~~ */
+body {
+	background:#000 url('../images/splash-background.png') no-repeat top center;
+}
+/* ~~~End Global~~~ */
