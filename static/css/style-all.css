@@ -28,9 +28,10 @@ div#container {
 	top:0px;
 	left:0px;
 	width:100%;
+	background:url(../images/container-background.png) repeat-y top center;
 }
 	div#main-container {
-		background:url(../images/container-background.png) repeat-y;
+		background:url(../images/container-background-bright.png) no-repeat top center;
 		width:700px;
 		margin:0 auto;
 		min-height:400px;
