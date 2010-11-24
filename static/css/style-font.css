@@ -1,0 +1,11 @@
+/* Fonts for MMRambotics */
+
+@font-face {
+	font-family:Bebas;
+	src:url(../fonts/bebas.ttf);
+}
+
+@font-face {
+	font-family:'Dead Kansas';
+	src:url(../fonts/dead-kansas.ttf);
+}
