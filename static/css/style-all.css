@@ -52,6 +52,13 @@ div#container {
 			width:550px;
 			min-height:400px;
 		}
+			div#container div#main-container div#content div#header {
+				text-align:right;
+				padding:44px 10px 0px 0px;
+				font-family:Bebas;
+				font-size:3.2em;
+				color:#fff;
+			}
 /* ~~~End Main Layout~~~ */
 
 /* ~~~Main Menu~~~ */
@@ -61,7 +68,7 @@ ul#main-menu {
 	ul#main-menu li a {
 		color:#ddd;
 		font-family:Bebas;
-		font-size:23px;
+		font-size:1.6em;
 		text-decoration:none;
 		font-weight:500;
 		letter-spacing:2px;
