@@ -1,0 +1,23 @@
+/* 
+ * @author: MMRambotics
+ * @description: Stylesheet for all main pages.
+ */
+ 
+/* ~~~Reset~~~ */
+* {
+	margin:0px;
+	padding:0px;
+	
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+}
+
+img {
+	border:0px;
+}
+/* ~~~End Reset~~~ */
+
+/* ~~~Global~~~ */
+body {
+	background:#000 url(../images/main-background.png) no-repeat top center;
+}
+/* ~~~End Global~~~ */
