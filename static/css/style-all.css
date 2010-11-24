@@ -24,6 +24,14 @@ body {
 .bebas {
 	font-family:Bebas;
 }
+
+p, address {
+	color:#fff;
+}
+
+a { color:#39f; }	
+a:hover { color:#ddd; }
+a:visited { color:#bababa; }
 /* ~~~End Global~~~ */
 
 /* ~~~Main Layout~~~ */
@@ -44,21 +52,30 @@ div#container {
 			float:left;
 			width:130px;
 			background:url(../images/border-sidebar.png) no-repeat top left;
-			min-height:400px;
+			min-height:500px;
 			padding:50px 0px 0px 20px;
 		}
 		div#container div#main-container div#content {
 			float:right;
-			width:550px;
-			min-height:400px;
+			width:530px;
+			min-height:500px;
+			padding-right:10px;
 		}
 			div#container div#main-container div#content div#header {
 				text-align:right;
-				padding:44px 10px 0px 0px;
-				font-family:Bebas;
-				font-size:3.2em;
-				color:#fff;
+				padding:44px 0px 0px 0px;
+				margin-bottom:20px;
 			}
+				div#container div#main-container div#content div#header h2 {
+					font-family:Bebas;
+					font-size:3.6em;
+					color:#fff;
+				}
+				div#container div#main-container div#content div#header h3 {
+					font-family:Bebas;
+					font-size:1.8em;
+					color:#fff;
+				}
 /* ~~~End Main Layout~~~ */
 
 /* ~~~Main Menu~~~ */
