@@ -59,7 +59,6 @@ div#container {
 			float:right;
 			width:530px;
 			min-height:500px;
-			padding-right:10px;
 		}
 			div#container div#main-container div#content div#header {
 				text-align:right;
@@ -70,11 +69,14 @@ div#container {
 					font-family:Bebas;
 					font-size:3.6em;
 					color:#fff;
+					padding-right:10px;
+					margin-bottom:6px;
 				}
 				div#container div#main-container div#content div#header h3 {
 					font-family:Bebas;
 					font-size:1.8em;
 					color:#fff;
+					padding-right:10px;
 				}
 /* ~~~End Main Layout~~~ */
 
@@ -91,6 +93,15 @@ ul#main-menu {
 		letter-spacing:2px;
 	}
 	ul#main-menu li a:hover {
+		color:#fff;
+	}
+
+div#sub-menu {
+	display:none;
+	background:url(../images/sub-menu-background.png);
+	height:25px;
+}	
+	div#sub-menu a {
 		color:#fff;
 	}
 /* ~~~End Main Menu~~~ */
