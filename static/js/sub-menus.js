@@ -94,7 +94,7 @@ function FillSubMenu(subMenuId) {
 			var curLink = subMenuSet[i];
 			subNavText += '<a href="' + curLink.link + '" title="' + curLink.title + '">' + curLink.text + '</a>';
 			if (i < setLength - 1)
-				subNavText += " | ";
+				subNavText += "&nbsp;&nbsp;";
 		}
 		$("#sub-menu").html(subNavText);
 	}
