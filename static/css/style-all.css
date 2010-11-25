@@ -8,7 +8,7 @@
 	margin:0px;
 	padding:0px;
 	
-	font-family:Verdana, Helvetica, Arial, sans-serif;
+	font-family:Verdana, Tahoma, Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -29,9 +29,19 @@ p, address {
 	color:#fff;
 }
 
+ol {
+	margin-left:25px;
+	color:#fff;
+}
+
 a { color:#39f; }	
 a:hover { color:#ddd; }
 a:visited { color:#bababa; }
+
+.highlight {
+	font-weight:600;
+	color:#39f;
+}
 /* ~~~End Global~~~ */
 
 /* ~~~Main Layout~~~ */
@@ -60,10 +70,13 @@ div#container {
 			width:530px;
 			min-height:500px;
 		}
+			div#container div#main-container p {
+				padding-right:10px;
+			}
 			div#container div#main-container div#content div#header {
 				text-align:right;
 				padding:44px 0px 0px 0px;
-				margin-bottom:20px;
+				margin-bottom:5px;
 			}
 				div#container div#main-container div#content div#header h2 {
 					font-family:Bebas;
@@ -77,6 +90,14 @@ div#container {
 					font-size:1.8em;
 					color:#fff;
 					padding-right:10px;
+				}
+			div#container div#main-container div#content div#subheader {
+				text-align:right;
+				padding-right:10px;
+				margin-bottom:10px;
+			}	
+				div#container div#main-container div#content div#subheader a {
+					color:#fff;
 				}
 /* ~~~End Main Layout~~~ */
 
