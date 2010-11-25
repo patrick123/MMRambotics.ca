@@ -60,16 +60,13 @@ div#container {
 		margin-bottom:15px;
 	}
 	div#container div#feeds p {
-		color:#696969;
+		color:#fff;
 	}
 		div#container div#feeds p span.highlight {
 			color:#00e4ff;
 		}
 		div#container div#feeds p a {
-			color:#00e4ff;
-		}
-		div#container div#feeds p a:visited {
-			color:#696969;
+			color:#fff;
 		}
 		div#container div#feeds p a:hover {
 			color:#fff;
