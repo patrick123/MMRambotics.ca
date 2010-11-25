@@ -65,11 +65,15 @@
 		</div>
 		
 		<script type="text/javascript" src="js/jquery-min.js"></script>
-		<script type="text/javascript">
+		<script type="text/javascript" src="js/sub-menus.js"></script>
+		<script type="text/javascript">		
 			$(document).ready(function() {
 			
 				$(".sub-nav").click(function() {
 					$("#sub-menu").slideDown(400);
+					
+					var subMenuId = $(this).attr("id");
+					FillSubMenu(subMenuId);
 				});
 			
 			});
