@@ -29,10 +29,11 @@ p, address, h3, h2, h4 {
 	color:#fff;
 }
 
-ol {
-	margin-left:25px;
+ol, li {
+	margin-left:18px;
 	color:#fff;
 }
+
 
 a { color:#39f; }	
 a:hover { color:#ddd; }
@@ -104,6 +105,7 @@ div#container {
 /* ~~~Main Menu~~~ */
 ul#main-menu {
 	list-style:none;
+	margin-left:-18px;
 }
 	ul#main-menu li a {
 		color:#ddd;

@@ -53,79 +53,71 @@
 						<h4><a href="about_the_technology.html" title="About the Technology">About the Technology</a></h4>
 					</div>
 
+					<br />
+
 					<h3>The cRIO</h3>
 
+					<br />
+					
 					<p>
 						The robot controller is a National Instruments cRIO, short for compact Reprogramable Input Output.
 					</p>
 					
+					<br />
 					
 					<h4>Features</h4>
 					
-					<p>
-						<ul>
-							<li>Rugged, embedded machine control and monitoring system customized for FIRST</li>
-							<li>400 MHz industrial real-time processor for control, data logging, and analysis</li>
-							<li>2M gate, 8-slot FPGA chassis for custom I/O timing, control, and processing</li>
-							<li>Two 10/100BASE-T Ethernet ports; RS232 serial port for optional connection to peripherals</li>
-							<li>24 VDC power supply input</li>
-							<li>64 MB DRAM and 256 MB memory</li>
-						</ul>
-					</p>
+					<br />
+					
+					<ul>
+						<li>Real time operating system (<a href="http://www.windriver.com/products/vxworks/" title="VxWorks by WindRiver" target="_blank">VxWorks by WindRiver</a>) customized for FIRST.</li>
+						<li>400MHz processor with 64MB of DRAM and 256MB non-volatile memory.</li>
+						<li>Two Ethernet ports and an RS232 serial port for connections to peripherals.</li>
+						<li>24VDC power supply input which works with the FIRST Power Distribution Board.</li>
+					</ul>
+					
+					<br />
 					
 					<p>
-						The NI cRIO-FRC integrated system combines a processor and a reconfigurable field-programmable gate array (FPGA). It integrates a 400 MHz processor with a 2M gate FPGA and has eight slots for NI C Series I/O modules. The cRIO can survive tempuratures of -20 to 55 degrees celcuis. The system provides 64 MB of DRAM for embedded operation and 256 MB of nonvolatile memory.
+						We use the FIRST-designated <a href="http://decibel.ni.com/content/docs/DOC-1750" title="NI cRio-FRC Overview" target="_blank">NI cRIO-FRC</a> integrated microprocessor to control our robot.  The cRio allows for swappable modules to interface with other FIRST components.  It can survive tempuratures of -20 to 55 degrees celcuis. The system provides 64 MB of DRAM for embedded operation and 256 MB of non-volatile memory.
 					</p>
+					
+					<br />
 					
 					<p>
-						The cRIO-FRC features two 10/100 Mbits/s Ethernet ports that we use for comunicateing with our driver station and the second port is used for our camera for visual feed back to the driver. The cRIO had a built-in Web (HTTP) and file (FTP) servers.
+						The cRIO-FRC features two 10/100 Mbits/s Ethernet ports that we use for communicating with the driver station and an RS232 serial port for connecting peripherals such as a CAN (Controller Area Network) bus.
 					</p>
+					
+					<br />
 					
 					<p>
-						For the 2009 and 2010 competition seasons, FIRST has selected three C Series I/O modules: the NI 9201 for analog inputs, the NI 9403 for digital I/O, and the NI 9472 for pneumatic output. 
+						For the 2009-2011 competition seasons, FIRST has selected three C Series I/O modules: the NI 9201 for analog inputs, the NI 9403 for digital I/O, and the NI 9472 for pneumatic output. 
 					</p>
 					
+					<br />
 					
 					<h3>The Jaguars</h3>
 					
-					<p>
-						All of the motors on our robots have been controlled by Texas Instraments Jaguars also know as MDL-BDC24's for the previous two years.
-					</p>
-					
-					<h4>Features</h4>
-					
-					<p>
-						<ul>
-							<li>PWM interface or Controller Area Network (CAN) interface via a RS232 serial interface</li>
-							<li>Real-time monitoring of current, voltage and speed.</li>
-							<li>Load firmware over RS232/CAN</li>
-							<li>Directly interfaces to a PC serial port or National Instruments cRIO</li>
-						</ul>
-					</p>
-					
-					<p>
-						The MDL-BDC24 improves on the MDL-BDC design, which we used in 2009 by providing the ability to use both 12 V and 24 V  DC motors at up to 40 A, with a new RS232-based serial control input that acts as a serial to CAN bridge. The module uses highly optimized software and a Stellaris microcontroller to implement open-loop voltage control as well as closed-loop control of speed, position, or motor current. The H-bridge on the MDL-BDC24 is run at high-frequency through the MCU's integrated PWM interface and enables DC motors to run smoothly and quietly over a wide speed range.
-					</p>
-					
-					<h3>The Batteries</h3>
-					
-					<p>
-						For the previous two years we have use batterys from Enersys and MK Battery.
-					</p>
-					
-					<h4>Features</h4>
-					
-					<p>
-						<ul>
-							<li>Nominal Voltage: 12V</li>
-							<li>Weight 13.82 Lbs. (6.283 kg)</li>
-							<li>Maximum Discharge Current for 30 seconds: 360A</li>
-							<li>Maximum Discharge Current for 5 seconds: 720A</li>
-						</ul>
-					</p>
-										
 					<br />
 					
+					<p>
+						All of the motors on our robots have been controlled by Texas Instraments Jaguars also know as MDL-BDC24's for the previous two years.  Alternatives exist, such as the <a href="http://ifirobotics.com/" title="IFI Robotics" target="_blank">Innovation First Victor</a>.
+					</p>
+					
+					<br />
+					
+					<h4>Features</h4>
+					
+					<br />
+					
+					<ul>
+						<li>PWM interface or Controller Area Network (CAN) interface via a RS232 serial interface</li>
+						<li>Real-time monitoring of current, voltage and speed.</li>
+						<li>Load firmware over RS232/CAN</li>
+						<li>Directly interfaces to a PC serial port or National Instruments cRIO</li>
+					</ul>
+					
+					<br />
 									
 				</div>
 			
