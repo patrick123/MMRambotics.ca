@@ -75,7 +75,7 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Contact Us", \
 				"title": "Contact MMRambotics FRC 2200", \
-				"link": "contact_mmrambotics.html", \
+				"link": "contact_mmrambotics.html" \
 			}, \
 			{ \
 				"text": "Contact Sponsors", \
