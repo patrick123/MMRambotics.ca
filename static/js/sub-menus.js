@@ -15,7 +15,7 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "About The Technology", \
 				"title": "Technology | MMRambotics FRC 2200", \
-				"link": "about_the_technology" \
+				"link": "about_the_technology.html" \
 			} \
 		], \
 	"history": \
