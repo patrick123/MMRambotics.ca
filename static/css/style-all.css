@@ -45,9 +45,10 @@ ol, li {
 		margin-bottom:10px;
 	}
 
-a { color:#00e4ff; }	
-a:hover { color:#00fffc; }
+a         { color:#00e4ff; }	
 a:visited { color:#0090ff; }
+a:hover   { color:#00fffc; }
+a:active  { color:#00fffc; }
 
 .highlight {
 	font-weight:600;
