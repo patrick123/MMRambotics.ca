@@ -45,9 +45,9 @@ ol, li {
 		margin-bottom:10px;
 	}
 
-a { color:#39f; }	
-a:hover { color:#ddd; }
-a:visited { color:#bababa; }
+a { color:#00e4ff; }	
+a:hover { color:#00fffc; }
+a:visited { color:#0090ff; }
 
 .highlight {
 	font-weight:600;
