@@ -37,6 +37,13 @@ ol, li {
 .no-bullet {
 	list-style:none;
 }
+	.no-bullet a, .no-bullet img {
+		text-decoration:none;
+		border:0px;
+	}
+	.no-bullet li {
+		margin-bottom:10px;
+	}
 
 a { color:#39f; }	
 a:hover { color:#ddd; }
