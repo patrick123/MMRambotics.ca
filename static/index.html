@@ -17,6 +17,16 @@
 		
 		<link rel="SHORTCUT ICON" href="icons/favicon.ico" />
 		<link rel="apple-touch-icon" href="icons/iphone.png" />
+			
+		<script type="text/javascript" src="js/cookies.js"></script>
+		<script type="text/javascript">
+			if (readCookie("splash_status") != "viewed") {
+				writeCookie("splash_status", "viewed", 3);
+				window.location = "splash.html";
+			}
+			
+			writeCookie("current_menu", "", 1);
+		</script>
 	
 	</head>
 	
@@ -69,7 +79,7 @@
 		
 		<script type="text/javascript" src="js/jquery-min.js"></script>
 		<script type="text/javascript" src="js/sub-menus.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>		
+		<script type="text/javascript" src="js/main.js"></script>	
 			
 	</body>
 
