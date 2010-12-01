@@ -25,7 +25,9 @@
 	
 <br />
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/KsDh4nBzjMg?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/KsDh4nBzjMg?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="http://www.youtube.com/v/KsDh4nBzjMg">
+<param name="movie" value="http://www.youtube.com/v/KsDh4nBzjMg" />
+</object>
 
 <br /><br /><br />
 
@@ -39,7 +41,7 @@
 
 <br />
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/12lWQ2DN_TM?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/12lWQ2DN_TM?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="http://www.youtube.com/v/12lWQ2DN_TM"><param name="movie" value="http://www.youtube.com/v/12lWQ2DN_TM" /></object>
 
 <br /><br /><br />
 
@@ -53,7 +55,7 @@
 
 <br />
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/-GS9dlR_KnM?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/-GS9dlR_KnM?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="http://www.youtube.com/v/-GS9dlR_KnM"><param name="movie" value="http://www.youtube.com/v/-GS9dlR_KnM" /></object>
 
 <br /><br /><br />
 
@@ -67,7 +69,7 @@
 
 <br />
 
-<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/GVf4FHIDRro?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/GVf4FHIDRro?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="http://www.youtube.com/v/GVf4FHIDRro"><param name="movie" value="http://www.youtube.com/v/GVf4FHIDRro" /></object>
 
 <br />
 <br />
