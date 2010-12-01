@@ -2,6 +2,7 @@
 
 		<title>Contact Us | &&&title&&&</title>
 
+    <link rel="stylesheet" type="text/css" href="css/style-contact.css" />
 <<<head_content>>>
 <<<page_body>>>
 		
@@ -35,13 +36,24 @@
     
     <br /><br />
     
-    <label for="name">Title:</label><br />
+    <label for="title">Title:</label><br />
     <input type="text" id="title" name="title" />
     
     <br /><br />
     
-    <label for="name">Phone Number:</label><br />
+    <label for="phone-number">Phone Number:</label><br />
     <input type="text" id="phone-number" name="phone-number" />
+    
+    <br /><br />
+    
+    <label for="category">Category:</label><br />
+    <select id="category" name="category">
+      <option value="general">General Inquiry</option>
+      <option value="sponsorship">Sponsorship</option>
+      <option value="events">Competition Dates & Info</option>
+      <option value="team">Team Meetings and Info</option>
+      <option value="other">Other</option>
+    </select>
     
     <br /><br />
     
@@ -64,5 +76,7 @@
 	2425 Upper Middle Road<br />
 	L7P 3N9<br />
 </address>
+					
+<br /><br />
 					
 <<<page_end>>>

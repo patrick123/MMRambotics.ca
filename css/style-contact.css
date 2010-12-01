@@ -1,0 +1,21 @@
+/* ~~~Contact Form Stylesheet ~~~ */
+
+.required {
+  color:#39f;
+  font-weight:600;
+}
+
+form#main-contact-form {
+  width:480px;
+  color:#fff;
+}
+  form#main-contact-form fieldset {
+    padding:20px;
+  }
+    form#main-contact-form fieldset legend {
+      margin-left:10px;
+      color:#fff;
+    } 
+  form#main-contact-form label {
+    color:#fff;
+  }
