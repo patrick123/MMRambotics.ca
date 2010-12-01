@@ -27,7 +27,7 @@
        $configuration = array(
       
         // General Site
-        'base_title' => 'MMRambotics',
+        'base_title' => 'MMRambotics FRC #2200',
         
         // File paths
         'template_filepath_root'  => 'templates',
