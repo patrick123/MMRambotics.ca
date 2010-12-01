@@ -1,87 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<<<page_start>>>
+	
+		<title>About Our Website | &&&title&&&</title>
 
-<html lang="en-us" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<<<head_content>>>
+<<<page_body>>>
 
-	<head>
-	
-		<title>About Our Website | MMRambotics FRC 2200</title>
-		
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
-		<meta name="Description" content="The homepage of MMRambotics. Team 2200 in the FIRST Robtoics Competition. Just that hardcore." />
-		<meta name="Keywords" content="first, robots, robotics competition, frc, mmrambotics, mmrobinson, hdsb, mozilla, jaydeva" />
-		<meta name="Author" content="MMRambotics" />
-		
-		<link rel="stylesheet" type="text/css" href="css/style-all.css" />
-		<link rel="stylesheet" type="text/css" href="css/style-font.css" />
-		
-		<link rel="SHORTCUT ICON" href="icons/favicon.ico" />
-		<link rel="apple-touch-icon" href="icons/iphone.png" />
-		
-		<script type="text/javascript" src="js/cookies.js"></script>
-	
-	</head>
-	
-	<body>
-	
-		<div id="container">
-	
-			<div id="main-container">
-				
-				<div id="sidebar">
-				
-					<ul id="main-menu">
-						<li><a href="index.html" title="Home | MMRambotics FRC 2200">Home</a></li>
-						<li><a href="#" title="About" id="about" class="sub-nav">About</a></li>
-						<li><a href="#" title="History" id="history" class="sub-nav">History</a></li>
-						<li><a href="#" title="Sponsors" id="sponsors" class="sub-nav">Sponsors</a></li>
-						<li><a href="#" title="Media" id="media" class="sub-nav">Media</a></li>
-						<li><a href="#" title="Resources" id="resources" class="sub-nav">Resources</a></li>
-						<li><a href="#" title="Contact" id="contact-us" class="sub-nav">Contact</a></li>
-					</ul>
-				
-				
-				</div>
-			
-				<div id="content">
+<<<header_start>>>About The Site<<<header_end>>>
 					
-					<div id="header">
-						<h2 class="bebas">About The Site</h2>
-						<div id="sub-menu"></div>
-						<h3>MMRambotics FRC Team #2200</h3>
-					</div>
-					
-					<br />
-					
-					<p>
-						Our programming and web sub-team created the website with collaborated content from the rest of them.  
-					</p>
-					
-					<br />
-					
-					<p>
-						Using HTML &amp; CSS with no templates and no 3rd party content management systems, the website was coded entirely from scratch the utmost care.  We conform to open standards and of course fully validate with XHTML 1.0 and CSS 2.1 (however, we're experimenting with CSS 3 and HTML 5 to keep on the bleeding edge).
-					</p>
-					
-					<br />
-					
-					<p>
-						Thanks to our original team founder Matt Gardner and design sub-team for the awesome design.
-					</p>
-					
-					<br />
-					
-									
-				</div>
-			
-			</div>
-			
-		</div>
-		
-		<script type="text/javascript" src="js/jquery-min.js"></script>
-		<script type="text/javascript" src="js/sub-menus.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>	
-	
-	</body>
+<br />
 
-</html>
+<p>
+	Our programming and web sub-team created the website with collaborated content from the rest of them.  
+</p>
+
+<br />
+
+<p>
+	Using HTML &amp; CSS with no templates and no 3rd party content management systems, the website was coded entirely from scratch the utmost care.  We conform to open standards and of course fully validate with XHTML 1.0 and CSS 2.1 (however, we're experimenting with CSS 3 and HTML 5 to keep on the bleeding edge).
+</p>
+
+<br />
+
+<p>
+	Thanks to our original team founder Matt Gardner and design sub-team for the awesome design.
+</p>
+
+<br />
+
+
+<<<page_end>>>
