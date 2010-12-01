@@ -22,19 +22,19 @@
    */
    
   class Configuration {
-  
-    $configuration = array(
-      
-      // General Site
-      'base_title' => 'MMRambotics',
-      
-      // File paths
-      'template_filepath_root' => '/templates'
-    );  
     
     public function getValue($configurationKey) {
+       $configuration = array(
+      
+        // General Site
+        'base_title' => 'MMRambotics',
+        
+        // File paths
+        'template_filepath_root' => '/templates'
+      );  
+      
       if (array_key_exists($configurationKey, $configuration)) {
-        return $confinguration[$configurationKey];
+        return $configuration[$configurationKey];
       }
     }
      
