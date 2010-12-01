@@ -16,6 +16,7 @@ function MenuAppear(withAnimation, elm) {
 
 $(document).ready(function() {
 
+  // Menu
 	MenuAppear(false, false);
 
 	$(".sub-nav").click(function() {
@@ -23,6 +24,8 @@ $(document).ready(function() {
 		writeCookie("current_menu", $(this).attr("id"));
 	});
 
-	
+	// Contact form:
+  $("form#main-contact-form input, form#main-contact-form textarea").onkeyup(function() {
+  }); 
 
 });

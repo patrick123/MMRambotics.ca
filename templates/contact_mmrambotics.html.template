@@ -50,7 +50,7 @@
     <select id="category" name="category">
       <option value="general">General Inquiry</option>
       <option value="sponsorship">Sponsorship</option>
-      <option value="events">Competition Dates & Info</option>
+      <option value="events">Competition Dates and Info</option>
       <option value="team">Team Meetings and Info</option>
       <option value="other">Other</option>
     </select>
