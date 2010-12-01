@@ -63,7 +63,7 @@
      * and replaces each match with the contents of the partial.
      */
     private function filterForPartials() {
-      $partialMatches = $this->getTemplateParitals();
+      $partialMatches = $this->getTemplatePartials();
       foreach ($partialMatches as $match) 
         $this->replaceTemplateContents($match, $this->getPartialContents($match));
         
