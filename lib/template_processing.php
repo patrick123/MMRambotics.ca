@@ -19,7 +19,13 @@
      */ 
     public function __construct($templateName) {
       $this->getTemplateContents($templateName); 
-      $this->filterForPartials();
+      
+      // Process partials until no more are found.
+      $numPartials = 1;
+      do {
+        $numPartials = $this->filterForPartials();
+      } while ($numPartials > 0);
+      
       $this->filterTemplateVariables();
     }
     
@@ -57,8 +63,11 @@
      * and replaces each match with the contents of the partial.
      */
     private function filterForPartials() {
-      foreach ($this->getTemplatePartials() as $match) 
+      $partialMatches = $this->getTemplateParitals();
+      foreach ($partialMatches as $match) 
         $this->replaceTemplateContents($match, $this->getPartialContents($match));
+        
+      return count($partialMatches);
     } 
     
     /*
