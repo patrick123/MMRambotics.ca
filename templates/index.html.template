@@ -7,7 +7,7 @@
 <script type="text/javascript">
 	if (readCookie("splash_status") != "viewed") {
 		writeCookie("splash_status", "viewed", 3);
-		window.location = "splash.html";
+		window.location = "splash.php";
 	}
 	
 	writeCookie("current_menu", "", 1);
