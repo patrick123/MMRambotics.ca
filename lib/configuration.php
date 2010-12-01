@@ -21,24 +21,29 @@
    * New variable names should be in snake case.
    */
    
-  class SiteConfiguration {
+  class Configuration {
+  
+    $configuration = array(
+      
+      // General Site
+      'base_title' => 'MMRambotics',
+      
+      // File paths
+      'template_filepath_root' => '/templates'
+    );  
     
-    // General Site
-    // Base page title (might be appended or prefixed to).
-    public $base_title             = 'MMRambotics';
-     
-    // File Paths
-    public $template_filepath_root = '/templates'; 
+    public function getValue($configurationKey) {
+      if (array_key_exists($configurationKey, $configuration)) {
+        return $confinguration[$configurationKey];
+      }
+    }
      
   }
-
-  // Don't remove this line.
-  $configuration = new SiteConfiguration();
   
   /*
    * Why are these not in a human-readable file?  We don't want the trouble
-   * of accessing a text file repeatedly for configuration; this was is dynamic
-   * and some people (*cough* Sean *cough*) will have a hard time editing it ;)
+   * of accessing a text file repeatedly for configuration; this is dynamic
+   * AND some people (*cough* Sean *cough*) will have a hard time editing it ;)
    */
 
 ?>
