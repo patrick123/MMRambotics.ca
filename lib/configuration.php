@@ -31,7 +31,8 @@
         
         // File paths
         'template_filepath_root'  => 'templates',
-        'template_file_extension' => '.html.template'
+        'template_file_extension' => '.html.template',
+        'partial_file_extension'  => '.html.partial'
       );  
       
       if (array_key_exists($configurationKey, $configuration)) {
