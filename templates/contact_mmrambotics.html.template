@@ -5,13 +5,56 @@
 <<<head_content>>>
 <<<page_body>>>
 		
-<<<header_start>>>Contact MMRambotics<<<header_end>>>
+<<<header_start>>>Contact<<<header_end>>>
 					
 <br />
 
 <p>
-	You can contact us at <a href="mailto:business@mmrambotics.ca" title="business@mmrambotics.ca" target="_blank">business@mmrambotics.ca</a> for inquiries about joining the team, sponsors, or anything else!
+	You can contact us at <a href="mailto:business@mmrambotics.ca" title="business@mmrambotics.ca" target="_blank">business@mmrambotics.ca</a> for inquiries about joining the team, sponsors, or anything else!<br /><br />Alternatively you can use our contact form below.<br /><br />
 </p>
+
+
+<div id="confirmation-dialog">
+</div>
+
+<form id="main-contact-form" action="#">
+
+  <fieldset>
+  
+    <legend>Contact MMRambotics</legend>
+    
+    <p><<<required>>> indicates a required field.</p>
+    <br />
+    <label for="email">Email Address: <<<required>>></label><br />
+    <input type="text" id="email" name="email" />
+    
+    <br /><br />
+    
+    <label for="name">Full Name: <<<required>>></label><br />
+    <input type="text" id="full-name" name="full-name" />
+    
+    <br /><br />
+    
+    <label for="name">Title:</label><br />
+    <input type="text" id="title" name="title" />
+    
+    <br /><br />
+    
+    <label for="name">Phone Number:</label><br />
+    <input type="text" id="phone-number" name="phone-number" />
+    
+    <br /><br />
+    
+    <label for="message">Message: <<<required>>><br />
+    <textarea id="message" name="message" rows="6" cols="40"></textarea>
+    
+    <br /><br />
+    
+    <span class="right"><input type="submit" value="Submit" name="submit" id="submit" /></span>
+  
+  </fieldset>
+
+</form>
 
 <br /><br />
 
