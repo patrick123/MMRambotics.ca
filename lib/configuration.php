@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * @author: Andrew Horsman | Mike Noseworthy | MMRambotics
+   * @author: Andrew Horsman | MMRambotics
    * @description: MMRambotics configuration settings.
    */
    
