@@ -30,7 +30,8 @@
         'base_title' => 'MMRambotics',
         
         // File paths
-        'template_filepath_root' => '/templates'
+        'template_filepath_root'  => 'templates',
+        'template_file_extension' => '.html.template'
       );  
       
       if (array_key_exists($configurationKey, $configuration)) {
