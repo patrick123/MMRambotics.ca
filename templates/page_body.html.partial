@@ -1,3 +1,24 @@
 </head>
 
 <body>
+
+  <div id="container">
+  
+    <div id="main-container">
+    
+      <div id="sidebar">
+      
+       <ul id="main-menu">
+					<li><a href="index.html" title="Home | MMRambotics FRC 2200">Home</a></li>
+					<li><a href="#" title="About | MMRambotics FRC 2200" id="about" class="sub-nav">About</a></li>
+					<li><a href="#" title="History | MMRambotics FRC 2200" id="history" class="sub-nav">History</a></li>
+					<li><a href="#" title="Sponsors | MMRambotics FRC 2200" id="sponsors" class="sub-nav">Sponsors</a></li>
+					<li><a href="#" title="Media | MMRambotics FRC 2200" id="media" class="sub-nav">Media</a></li>
+					<li><a href="#" title="Resources | MMRambotics FRC 2200" id="resources" class="sub-nav">Resources</a></li>
+					<li><a href="#" title="Contact | MMRambotics FRC 2200" id="contact-us" class="sub-nav">Contact</a></li>
+				</ul>
+			
+			
+			</div><!-- End Sidebar -->
+			
+		  <div id="content">

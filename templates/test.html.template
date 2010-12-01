@@ -2,7 +2,11 @@
 
 <title>Test Page | &&&title&&&</title>
 
-<<<meta>>>
+<<<head_content>>>
 <<<page_body>>>
+
+<<<header_start>>>Test Page<<<header_end>>>
+
+<p>Test!</p>
 
 <<<page_end>>>
