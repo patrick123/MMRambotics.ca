@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-us" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+	
+		<title>About the Technology | MMRambotics FRC 2200</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<meta name="Description" content="The homepage of MMRambotics. Team 2200 in the FIRST Robtoics Competition. Just that hardcore." />
+		<meta name="Keywords" content="first, robots, robotics competition, frc, mmrambotics, mmrobinson, hdsb, mozilla, jaydeva" />
+		<meta name="Author" content="MMRambotics" />
+		
+		<link rel="stylesheet" type="text/css" href="css/style-all.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-font.css" />
+		
+		<link rel="SHORTCUT ICON" href="icons/favicon.ico" />
+		<link rel="apple-touch-icon" href="icons/iphone.png" />
+		
+		<script type="text/javascript" src="js/cookies.js"></script>
+	
+	</head>
+	
+	<body>
+	
+		<div id="container">
+	
+			<div id="main-container">
+				
+				<div id="sidebar">
+				
+					<ul id="main-menu">
+						<li><a href="index.html" title="Home | MMRambotics FRC 2200">Home</a></li>
+						<li><a href="#" title="About" id="about" class="sub-nav">About</a></li>
+						<li><a href="#" title="History" id="history" class="sub-nav">History</a></li>
+						<li><a href="#" title="Sponsors" id="sponsors" class="sub-nav">Sponsors</a></li>
+						<li><a href="#" title="Media" id="media" class="sub-nav">Media</a></li>
+						<li><a href="#" title="Resources" id="resources" class="sub-nav">Resources</a></li>
+						<li><a href="#" title="Contact" id="contact-us" class="sub-nav">Contact</a></li>
+					</ul>
+				
+				
+				</div>
+			
+				<div id="content">
+					
+					<div id="header">
+						<h2 class="bebas">Our Technology</h2>
+						<div id="sub-menu"></div>
+						<h3>MMRambotics FRC Team #2200</h3>
+					</div>
+					
+					<br />
+
+					<h3><i>The cRIO</i></h3>
+
+					<br />
+					
+					<p>
+						The robot controller is a National Instruments cRIO, short for compact Reprogramable Input Output.
+					</p>
+					
+					<br />
+					
+					<h4>Features</h4>
+					
+					<br />
+					
+					<ul>
+						<li>Real time operating system (<a href="http://www.windriver.com/products/vxworks/" title="VxWorks by WindRiver" target="_blank">VxWorks by WindRiver</a>) customized for FIRST.</li>
+						<li>400MHz processor with 64MB of DRAM and 256MB non-volatile memory.</li>
+						<li>Two Ethernet ports and an RS232 serial port for connections to peripherals.</li>
+						<li>24VDC power supply input which works with the FIRST Power Distribution Board.</li>
+					</ul>
+					
+					<br />
+					
+					<p>
+						We use the FIRST-designated <a href="http://decibel.ni.com/content/docs/DOC-1750" title="NI cRio-FRC Overview" target="_blank">NI cRIO-FRC</a> integrated microprocessor to control our robot.  The cRio allows for swappable modules to interface with other FIRST components.  It can survive tempuratures of -20 to 55 degrees celcuis. The system provides 64 MB of DRAM for embedded operation and 256 MB of non-volatile memory.
+					</p>
+					
+					<br />
+					
+					<p>
+						The cRIO-FRC features two 10/100 Mbits/s Ethernet ports that we use for communicating with the driver station and an RS232 serial port for connecting peripherals such as a CAN (Controller Area Network) bus.
+					</p>
+					
+					<br />
+					
+					<p>
+						For the 2009-2011 competition seasons, FIRST has selected three C Series I/O modules: the NI 9201 for analog inputs, the NI 9403 for digital I/O, and the NI 9472 for pneumatic output. 
+					</p>
+					
+					<br />
+					
+					<h3><i>The Jaguars</i></h3>
+					
+					<br />
+					
+					<p>
+						All of the motors on our robots have been controlled by Texas Instraments Jaguars also know as MDL-BDC24's for the previous two years.  Alternatives exist, such as the <a href="http://ifirobotics.com/" title="IFI Robotics" target="_blank">Innovation First Victor</a>.
+					</p>
+					
+					<br />
+					
+					<h4></h4>
+					
+					<br />
+					
+					<ul>
+						<li>PWM interface or Controller Area Network (CAN) interface via a RS232 serial interface</li>
+						<li>Real-time monitoring of current, voltage and speed.</li>
+						<li>Load firmware over RS232/CAN</li>
+						<li>Directly interfaces to a PC serial port or National Instruments cRIO</li>
+					</ul>
+					
+					<br />
+									
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-min.js"></script>
+		<script type="text/javascript" src="js/sub-menus.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>	
+	
+	</body>
+
+</html>
