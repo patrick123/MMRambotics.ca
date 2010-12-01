@@ -5,17 +5,17 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "About FIRST", \
 				"title": "About FIRST | MMRambotics FRC 2200", \
-				"link": "about_first.html" \
+				"link": "about_first.php" \
 			}, \
 			{ \
 				"text": "About The Site", \
 				"title": "About The Site | MMRambotics FRC 2200", \
-				"link": "about_the_site.html" \
+				"link": "about_the_site.php" \
 			}, \
 			{ \
 				"text": "About The Technology", \
 				"title": "Technology | MMRambotics FRC 2200", \
-				"link": "about_the_technology.html" \
+				"link": "about_the_technology.php" \
 			} \
 		], \
 	"history": \
@@ -23,17 +23,17 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Team History", \
 				"title": "Team History | MMRambotics FRC 2200", \
-				"link": "team_history.html" \
+				"link": "team_history.php" \
 			}, \
 			{ \
 				"text": "Past FRC Games", \
 				"title": "Past FRC Games | MMRambotics FRC 2200", \
-				"link": "past_frc_games.html" \
+				"link": "past_frc_games.php" \
 			}, \
 			{ \
 				"text": "Our Past Robots", \
 				"title": "Our Past Robots | MMRambotics FRC 2200", \
-				"link": "our_past_robots.html" \
+				"link": "our_past_robots.php" \
 			} \
 		], \
 	"sponsors": \
@@ -41,12 +41,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Current Sponsors", \
 				"title": "Current Sponsors | MMRambotics FRC 2200", \
-				"link": "current_sponsors.html" \
+				"link": "current_sponsors.php" \
 			}, \
 			{ \
 				"text": "Past Sponsors", \
 				"title": "Past Sponsors | MMRambotics FRC 2200", \
-				"link": "past_sponsors.html" \
+				"link": "past_sponsors.php" \
 			} \
 		], \
 	"media": \
@@ -54,12 +54,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Photos", \
 				"title": "Photos | MMRambotics FRC 2200", \
-				"link": "mmrambotics_photos.html" \
+				"link": "mmrambotics_photos.php" \
 			}, \
 			{ \
 				"text": "Videos", \
 				"title": "Videos | MMRambotics FRC 2200", \
-				"link": "mmrambotics_videos.html" \
+				"link": "mmrambotics_videos.php" \
 			} \
 		], \
 	"resources": \
@@ -67,7 +67,7 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Helpful Links", \
 				"title": "Helpful Links | MMRambotics FRC 2200", \
-				"link": "mmrambotics_helpful_links.html" \
+				"link": "mmrambotics_helpful_links.php" \
 			} \
 		], \
 	"contact-us": \
@@ -75,12 +75,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Contact Us", \
 				"title": "Contact MMRambotics FRC 2200", \
-				"link": "contact_mmrambotics.html" \
+				"link": "contact_mmrambotics.php" \
 			}, \
 			{ \
 				"text": "Contact Sponsors", \
 				"title": "Contact Sponsors | MMRambotics FRC 2200", \
-				"link": "contact_mmrambotics_sponsors.html" \
+				"link": "contact_mmrambotics_sponsors.php" \
 			} \
 		] \
 }');
