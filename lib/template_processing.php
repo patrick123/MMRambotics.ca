@@ -57,10 +57,8 @@
      * and replaces each match with the contents of the partial.
      */
     private function filterForPartials() {
-      if (preg_match_all("/<<<.*?>>>/m", $this->templateContents, $matches) !== false) {
-        foreach ($matches[0] as $match) 
-          $this->replaceTemplateContents($match, $this->getPartialContents($match));
-      }
+      foreach ($this->getTemplatePartials() as $match) 
+        $this->replaceTemplateContents($match, $this->getPartialContents($match));
     } 
     
     /*
@@ -69,21 +67,37 @@
     private function replaceTemplateContents($search, $replace) {
       $this->templateContents = str_replace($search, $replace, $this->templateContents);
     }
-    
+  
+    /*
+     * Searches the template contents for variables (&&&variable_name&&&) and 
+     * replaces each match with the action associated with the variable.
+     */  
     private function filterTemplateVariables() {
-      if (preg_match_all("/&&&.*?&&&/m", $this->templateContents, $matches) !== false) {
-        foreach ($matches[0] as $match) {
-        
-          switch (parent::getVariableName($match)) {
-            case "title":
-              $this->replaceTemplateContents($match, Configuration::getValue('base_title'));
-              break;
-            default:
-              $this->replaceTemplateContents($match, "Processing error.");
-          }
-          
+      foreach ($this->getTemplateVariables() as $match) {
+        switch (parent::getVariableName($match)) {
+          case "title":
+            $this->replaceTemplateContents($match, Configuration::getValue('base_title'));
+            break;
+          default:
+            $this->replaceTemplateContents($match, "Processing error.");
         }
       }
+    }
+    
+    /*
+     * Returns an array of all template variable matches.
+     */
+    private function getTemplateVariables() {
+      preg_match_all("/&&&.*?&&&/m", $this->templateContents, $matches);
+      return $matches[0];
+    }
+    
+    /*
+     * Returns an array of all template partial matches.
+     */
+    private function getTemplatePartials() {
+      preg_match_all("/<<<.*?>>>/m", $this->templateContents, $matches);
+      return $matches[0];
     }
 
   }
