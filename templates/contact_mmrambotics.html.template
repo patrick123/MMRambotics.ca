@@ -53,6 +53,11 @@
     
     <br /><br />
     
+    <label for="subject">Subject: <<<required>>><br />
+    <input type="text" id="subject" name="subject" />
+    
+    <br /><br />
+    
     <label for="message">Message: <<<required>>><br />
     <textarea id="message" name="message" rows="6" cols="40"></textarea>
     
