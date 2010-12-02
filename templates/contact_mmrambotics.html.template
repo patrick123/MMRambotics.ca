@@ -58,7 +58,10 @@
     
     <br /><br />
     
-    <span class="right"><input type="submit" value="Submit" name="submit" id="submit" /></span>
+    <span class="right"><input type="submit" value="Submit" name="contact-form-submit" id="contact-form-submit" /></span>
+    <br />
+    <p id="results">
+    </p>
   
   </fieldset>
 
