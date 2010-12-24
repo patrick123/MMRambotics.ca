@@ -1,0 +1,14 @@
+<<<page_start>>>
+
+<title>401 | Not Authorized | &&&title&&&</title>
+
+<<<head_content>>>
+<<<page_body>>>
+
+<<<header_start>>>Not authorized<<<header_end>>>
+
+<p>Error 401.  Not authorized. We&apos;ve dispatched robots to take action.</p>
+
+<<<error_document>>>
+
+<<<page_end>>>

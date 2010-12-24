@@ -1,0 +1,14 @@
+<<<page_start>>>
+
+<title>403 | Forbidden | &&&title&&&</title>
+
+<<<head_content>>>
+<<<page_body>>>
+
+<<<header_start>>>Forbidden<<<header_end>>>
+
+<p>Error 403. Forbidden.  Our robots don&apos;t like this...</p>
+
+<<<error_document>>>
+
+<<<page_end>>>

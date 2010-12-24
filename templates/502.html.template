@@ -1,0 +1,14 @@
+<<<page_start>>>
+
+<title>502 | Bad Gateway | &&&title&&&</title>
+
+<<<head_content>>>
+<<<page_body>>>
+
+<<<header_start>>>Bad Gateway<<<header_end>>>
+
+<p>Error 502.  Bad gateway.  A robot wasn't able to make it all the way.</p>
+
+<<<error_document>>>
+
+<<<page_end>>>

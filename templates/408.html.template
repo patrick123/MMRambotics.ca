@@ -1,0 +1,14 @@
+<<<page_start>>>
+
+<title>408 | Request Timeout | &&&title&&&</title>
+
+<<<head_content>>>
+<<<page_body>>>
+
+<<<header_start>>>Request timeout<<<header_end>>>
+
+<p>Error 408. Request timeout.  Our robots got impatient./p>
+
+<<<error_document>>>
+
+<<<page_end>>>

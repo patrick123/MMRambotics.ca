@@ -1,0 +1,14 @@
+<<<page_start>>>
+
+<title>500 | Internal Server Error | &&&title&&&</title>
+
+<<<head_content>>>
+<<<page_body>>>
+
+<<<header_start>>>Internal server error<<<header_end>>>
+
+<p>Error 500. Internal server error.  One of our robots crashed into a wall.</p>
+
+<<<error_document>>>
+
+<<<page_end>>>
