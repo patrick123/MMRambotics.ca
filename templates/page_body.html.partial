@@ -9,7 +9,7 @@
       <div id="sidebar">
       
        <ul id="main-menu">
-					<li><a href="index.php" title="Home | MMRambotics FRC 2200">Home</a></li>
+					<li><a href="http://mmrambotics.ca/rambotics/index" title="Home | MMRambotics FRC 2200">Home</a></li>
 					<li><a href="#" title="About | MMRambotics FRC 2200" id="about" class="sub-nav">About</a></li>
 					<li><a href="#" title="History | MMRambotics FRC 2200" id="history" class="sub-nav">History</a></li>
 					<li><a href="#" title="Sponsors | MMRambotics FRC 2200" id="sponsors" class="sub-nav">Sponsors</a></li>
