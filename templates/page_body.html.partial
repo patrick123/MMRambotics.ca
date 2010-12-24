@@ -16,7 +16,10 @@
 					<li><a href="#" title="Media | MMRambotics FRC 2200" id="media" class="sub-nav">Media</a></li>
 					<li><a href="#" title="Resources | MMRambotics FRC 2200" id="resources" class="sub-nav">Resources</a></li>
 					<li><a href="#" title="Contact | MMRambotics FRC 2200" id="contact-us" class="sub-nav">Contact</a></li>
+					<li><a href="http://usfirst.org" title="FIRST Robotics" target="_blank">FIRST</a></li>
 				</ul>
+				<br />
+				<a href="http://usfirst.org" title="FIRST Robotics" target="_blank"><img src="http://mmrambotics.ca/images/first-logo.gif" alt="FIRST Robotics" title="FIRST Robotics" /></a>
 			
 			
 			</div><!-- End Sidebar -->

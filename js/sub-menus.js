@@ -68,6 +68,26 @@ $.subMenus = $.parseJSON('\
 				"text": "Helpful Links", \
 				"title": "Helpful Links | MMRambotics FRC 2200", \
 				"link": "http://mmrambotics.ca/rambotics/mmrambotics_helpful_links" \
+			}, \
+			{ \
+				"text": "Twitter", \
+				"title": "MMRambotics FRC 2200 Twitter", \
+				"link": "http://twitter.com/mmrambotics", \
+			}, \
+			{ \
+				"text": "YouTube", \
+				"title": "MMRambotics FRC 2200 YouTube", \
+				"link": "http://www.youtube.com/mmrambotics", \
+			}, \
+			{ \
+				"text": "GitHub Code", \
+				"title": "MMRambotics FRC 2200 GitHub Code Repository", \
+				"link": "http://www.github.com/mmrambotics", \
+			}, \
+			{ \
+				"text": "Facebook", \
+				"title": "MMRambotics FRC 2200 Facebook", \
+				"link": "http://www.facebook.com/MMRambotics.FRC2200" \
 			} \
 		], \
 	"contact-us": \
