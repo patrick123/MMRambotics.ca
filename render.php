@@ -12,7 +12,7 @@
   if (!isset($page))
     $page = "index";
 	
-  $page = str_replace("/rambotics/", "", $page);
+  $page = str_replace(array("/rambotics/", "."), "", $page);
 
   require_once(dirname(__FILE__) . '/lib/page.php');
   echo Page::Render($page);
