@@ -18,9 +18,17 @@
 <<<header_start>>>Home<<<header_end>>>
 		
 <br />
-					
-<p>
+			
+<h3 class="homepage-head">What is MMRambotics?</h3>
+<p class="homepage-text">
 	<b>MMRambotics</b> is a team of students, mentors, and sponsors who collaborate on building real robots.  We are based in Burlington, Ontario (proudly Canadian) but try to achieve communication with affiliates all over the globe.  We work together to place innovation in our robots each year.  We compete annually in the <a href="http://usfirst.org" title="US FIRST Robotics" target="_blank">FIRST</a> Robotics Competition, enduring six weeks of building and programming industry-standard technology to bring to the <a href="http://usfirst.org/roboticsprograms/frc/content.aspx?id=902" title="FRC Events" target="_blank">tournaments</a>.
+</p>
+
+<br /><br />
+
+<h3 class="homepage-head">What is FIRST?</h3>
+<p class="homepage-text">
+	<b>FIRST</b> is a non-profit organization with a mission, a mission to bring technology into the minds of everybody.  They organize robotics competitions internationally each year with new challenges and new heights of innovation.  FIRST is all about thinking, inspiring, and creating a better world.
 </p>
 
 <br /><br />
@@ -31,5 +39,7 @@
 	2425 Upper Middle Road<br />
 	L7P 3N9
 </address>
+
+<br /><br /><br />
 					
 <<<page_end>>>

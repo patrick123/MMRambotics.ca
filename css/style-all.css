@@ -54,6 +54,13 @@ a:active  { color:#00fffc; }
 	font-weight:600;
 	color:#39f;
 }
+
+.homepage-head {
+	font-style:italic;
+	font-weight:400;
+	font-size:18px;
+	margin-bottom:3px;
+}
 /* ~~~End Global~~~ */
 
 /* ~~~Main Layout~~~ */
