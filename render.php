@@ -8,10 +8,12 @@
    * http://mmrambotics.ca/render.php?page=about_the_team
    */
    
-  $page = $GET["page"];
-  if (empty($page))
+  $page = $_GET["page"];
+  if (!isset($page))
     $page = "index";
-    
+	
+  $page = str_replace("/rambotics/", "", $page);
+
   require_once(dirname(__FILE__) . '/lib/page.php');
   echo Page::Render($page);
 

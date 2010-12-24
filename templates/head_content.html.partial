@@ -4,10 +4,10 @@
 <meta name="Keywords" content="first, robots, robotics competition, frc, mmrambotics, rambotics, mmrobinson, hdsb, mozilla, jaydeva" />
 <meta name="Author" content="MMRambotics" />
 
-<link rel="stylesheet" type="text/css" href="css/style-all.css" />
-<link rel="stylesheet" type="text/css" href="css/style-font.css" />
+<link rel="stylesheet" type="text/css" href="http://mmrambotics.ca/css/style-all.css" />
+<link rel="stylesheet" type="text/css" href="http://mmrambotics.ca/css/style-font.css" />
 
-<link rel="SHORTCUT ICON" href="icons/favicon.ico" />
-<link rel="apple-touch-icon" href="icons/iphone.png" />
+<link rel="SHORTCUT ICON" href="http://mmrambotics.ca/icons/favicon.ico" />
+<link rel="apple-touch-icon" href="http://mmrambotics.ca/icons/iphone.png" />
 
-<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="http://mmrambotics.ca/js/cookies.js"></script>

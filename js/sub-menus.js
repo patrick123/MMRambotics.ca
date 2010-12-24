@@ -5,17 +5,17 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "About FIRST", \
 				"title": "About FIRST | MMRambotics FRC 2200", \
-				"link": "about_first.php" \
+				"link": "http://mmrambotics.ca/rambotics/about_first" \
 			}, \
 			{ \
 				"text": "About The Site", \
 				"title": "About The Site | MMRambotics FRC 2200", \
-				"link": "about_the_site.php" \
+				"link": "http://mmrambotics.ca/rambotics/about_the_site" \
 			}, \
 			{ \
 				"text": "About The Technology", \
 				"title": "Technology | MMRambotics FRC 2200", \
-				"link": "about_the_technology.php" \
+				"link": "http://mmrambotics.ca/rambotics/about_the_technology" \
 			} \
 		], \
 	"history": \
@@ -23,17 +23,17 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Team History", \
 				"title": "Team History | MMRambotics FRC 2200", \
-				"link": "team_history.php" \
+				"link": "http://mmrambotics.ca/rambotics/team_history" \
 			}, \
 			{ \
 				"text": "Past FRC Games", \
 				"title": "Past FRC Games | MMRambotics FRC 2200", \
-				"link": "past_frc_games.php" \
+				"link": "http://mmrambotics.ca/rambotics/past_frc_games" \
 			}, \
 			{ \
 				"text": "Our Past Robots", \
 				"title": "Our Past Robots | MMRambotics FRC 2200", \
-				"link": "our_past_robots.php" \
+				"link": "http://mmrambotics.ca/rambotics/our_past_robots" \
 			} \
 		], \
 	"sponsors": \
@@ -41,12 +41,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Current Sponsors", \
 				"title": "Current Sponsors | MMRambotics FRC 2200", \
-				"link": "current_sponsors.php" \
+				"link": "http://mmrambotics.ca/rambotics/current_sponsors" \
 			}, \
 			{ \
 				"text": "Past Sponsors", \
 				"title": "Past Sponsors | MMRambotics FRC 2200", \
-				"link": "past_sponsors.php" \
+				"link": "http://mmrambotics.ca/rambotics/past_sponsors" \
 			} \
 		], \
 	"media": \
@@ -54,12 +54,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Photos", \
 				"title": "Photos | MMRambotics FRC 2200", \
-				"link": "mmrambotics_photos.php" \
+				"link": "http://mmrambotics.ca/rambotics/mmrambotics_photos" \
 			}, \
 			{ \
 				"text": "Videos", \
 				"title": "Videos | MMRambotics FRC 2200", \
-				"link": "mmrambotics_videos.php" \
+				"link": "http://mmrambotics.ca/rambotics/mmrambotics_videos" \
 			} \
 		], \
 	"resources": \
@@ -67,7 +67,7 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Helpful Links", \
 				"title": "Helpful Links | MMRambotics FRC 2200", \
-				"link": "mmrambotics_helpful_links.php" \
+				"link": "http://mmrambotics.ca/rambotics/mmrambotics_helpful_links" \
 			} \
 		], \
 	"contact-us": \
@@ -75,12 +75,12 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Contact Us", \
 				"title": "Contact MMRambotics FRC 2200", \
-				"link": "contact_mmrambotics.php" \
+				"link": "http://mmrambotics.ca/rambotics/contact_mmrambotics" \
 			}, \
 			{ \
 				"text": "Contact Sponsors", \
 				"title": "Contact Sponsors | MMRambotics FRC 2200", \
-				"link": "contact_mmrambotics_sponsors.php" \
+				"link": "http://mmrambotics.ca/rambotics/contact_mmrambotics_sponsors" \
 			} \
 		] \
 }');

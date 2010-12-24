@@ -23,12 +23,5 @@ $(document).ready(function() {
 		MenuAppear(true, $(this));
 		writeCookie("current_menu", $(this).attr("id"));
 	});
-	
-	// Contact form
-	$("#contact-form-submit").click(function() {
-	  $.post("lib/contactUsAjax.php", { "contact": $(this).parent().serialize() }, function(data) {
-	    $("#results").html(data);
-	  });
-	}); 
 
 });

@@ -4,9 +4,9 @@
     
   </div><!-- End Container -->
   
-  <script type="text/javascript" src="js/jquery-min.js"></script>
-  <script type="text/javascript" src="js/sub-menus.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="http://mmrambotics.ca/js/jquery-min.js"></script>
+  <script type="text/javascript" src="http://mmrambotics.ca/js/sub-menus.js"></script>
+  <script type="text/javascript" src="http://mmrambotics.ca/js/main.js"></script>
   
   <<<google_analytics>>>
 

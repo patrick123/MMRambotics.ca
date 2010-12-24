@@ -33,9 +33,6 @@
         'template_filepath_root'  => 'templates',
         'template_file_extension' => '.html.template',
         'partial_file_extension'  => '.html.partial',
-        
-        // Email
-        'contact_us_recipient' => 'Andrew Horsman <business@mmrambotics.ca>'
       );  
       
       if (array_key_exists($configurationKey, $configuration)) {
