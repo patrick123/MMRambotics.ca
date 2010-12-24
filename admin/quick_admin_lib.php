@@ -27,6 +27,22 @@
 			header("Location: http://mmrambotics.ca/admin/panel.php");
 			die();
 		}
+		
+		/*
+		 * Logs the user out.
+		 */
+		public function logout() {
+			self::reset_session();
+			self::redirect();
+		}
+		
+		/*
+		 * Clears the two session variables.
+		 */
+		public function reset_session() {
+			unset($_SESSION['authenticated']);
+			unset($_SESSION['authentication_date']);
+		}
 	
 		/* 
 		 * Returns true if the `authenticated` session is 'true' and if the `authentication_date` is a valid, recent timestamp.
@@ -65,9 +81,7 @@
 			$currentDate = (int)date("U");
 			
 			if ($sessionDate + 86400 > $currentDate) {
-				unset($_SESSION['authentication_date']);
-				unset($_SESSION['authenticated']);
-				
+				self::reset_session();
 				return false;
 			} else {
 				return true;
