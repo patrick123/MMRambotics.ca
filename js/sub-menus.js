@@ -72,17 +72,17 @@ $.subMenus = $.parseJSON('\
 			{ \
 				"text": "Twitter", \
 				"title": "MMRambotics FRC 2200 Twitter", \
-				"link": "http://twitter.com/mmrambotics", \
+				"link": "http://twitter.com/mmrambotics" \
 			}, \
 			{ \
 				"text": "YouTube", \
 				"title": "MMRambotics FRC 2200 YouTube", \
-				"link": "http://www.youtube.com/mmrambotics", \
+				"link": "http://www.youtube.com/mmrambotics" \
 			}, \
 			{ \
 				"text": "GitHub Code", \
 				"title": "MMRambotics FRC 2200 GitHub Code Repository", \
-				"link": "http://www.github.com/mmrambotics", \
+				"link": "http://www.github.com/mmrambotics" \
 			}, \
 			{ \
 				"text": "Facebook", \
