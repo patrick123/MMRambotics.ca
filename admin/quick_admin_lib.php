@@ -12,6 +12,16 @@
 	 */
 	class QuickAdmin {
 	
+		/*
+		 * Redirects the user to the panel page if not logged in.
+		 */
+		public function redirectIfNotLoggedIn() {
+			if (!isLoggedIn()) {
+				header("Location: http://mmrambotics.ca/admin/panel.php");
+				die();
+			}
+		}
+	
 		/* 
 		 * Returns true if the `authenticated` session is 'true' and if the `authentication_date` is a valid, recent timestamp.
 		 */
@@ -23,9 +33,25 @@
 		}
 		
 		/*
+		 * Sets the session if the attempted login credentials are correct.  Returns false if attempted credentials are incorrect.
+		 */
+		public function attemptLogin($user, $pass) {
+			$credentials = explode('::', file_get_contents("../../db/admin_credentials.txt"));
+			
+			if ($user == $credentials[0] && $pass == $credentials[1]) {
+				$_SESSION['authenticated']       = 'true';
+				$_SESSION['authentication_date'] = date("U");
+				
+				return true;
+			} else {
+				return false;
+			}
+		}
+		
+		/*
 		 * Returns true if the stored session date is within a 24 hour window of the current date.
 		 */
-		private function isValidAuthDate() {
+		public function isValidAuthDate() {
 			if (!isset($_SESSION['authentication_date']))
 				return false;
 				
