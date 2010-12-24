@@ -11,6 +11,10 @@
     
     public function Render($templateName) {
       $page = new TemplateProcessing($templateName);
+	  $page = $page->getProcessedPage();
+	  if ($page === false)
+		return Render("404");
+	
       return $page->getProcessedPage();
     } 
     

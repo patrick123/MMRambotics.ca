@@ -13,7 +13,8 @@
   class TemplateProcessing extends TextHelper {
 
     private $templateContents = "";
-
+	private $debug            = false;
+	
     /*
      * Processes a specified template.
      */ 
@@ -41,9 +42,12 @@
      */
     private function getTemplateContents($templateName) {
       $templateFilePath = parent::templateFilePath($templateName);
-      if (!file_exists($templateFilePath))
-        parent::error("Template does not exist.  $templateFilePath");   
-        
+      if (!file_exists($templateFilePath)) 
+		if ($debug)
+			parent::error("Template does not exist.  $templateFilePath");   
+        else
+			return false;
+			
       $this->templateContents = file_get_contents($templateFilePath);
     }
     
