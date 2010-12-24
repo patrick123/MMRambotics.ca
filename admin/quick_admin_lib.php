@@ -16,7 +16,7 @@
 		 * Redirects the user to the panel page if not logged in.
 		 */
 		public function redirectIfNotLoggedIn() {
-			if (!isLoggedIn()) {
+			if (!self::isLoggedIn()) {
 				header("Location: http://mmrambotics.ca/admin/panel.php");
 				die();
 			}
