@@ -16,10 +16,16 @@
 		 * Redirects the user to the panel page if not logged in.
 		 */
 		public function redirectIfNotLoggedIn() {
-			if (!self::isLoggedIn()) {
-				header("Location: http://mmrambotics.ca/admin/panel.php");
-				die();
-			}
+			if (!self::isLoggedIn())
+				self::redirect();
+		}
+		
+		/*
+		 * Redirects the user to the panel page.
+		 */
+		public function redirect() {
+			header("Location: http://mmrambotics.ca/admin/panel.php");
+			die();
 		}
 	
 		/* 
