@@ -9,10 +9,8 @@
 	require_once("quick_admin_lib.php");
 
 	function displayOrProcessLoginForm() {
-		if (isset($_POST["user"]) && isset($_POST["pass"])) {
+		if (isset($_POST["user"]) && isset($_POST["pass"]))
 			processLoginForm();
-		else if ($_GET["action"] == "logout")
-			QuickAdmin::logout();
 		else
 			displayLoginForm();
 	}
@@ -38,21 +36,24 @@
 	
 	function displayLoginForm() {
 		?>
-		<form action="#" method="POST">
+		<form action="panel.php" method="POST">
 			<fieldset>
 				<legend>Login</legend>
 				
 				<label for="user">Username: </label><input type="text" name="user" /><br />
 				<label for="pass">Password: </label><input type="password" name="pass" /><br />
+				<input type="submit" value="Submit" name="submit" />
 			</fieldset>
 		</form>
 		<?php
 	}
 	
 	if (QuickAdmin::isLoggedIn())
-		displayConsole();
+		if ($_GET["action"] == "logout")
+			QuickAdmin::logout();
+		else
+			displayConsole();
 	else
 		displayOrProcessLoginForm();
-	
 	
 ?>

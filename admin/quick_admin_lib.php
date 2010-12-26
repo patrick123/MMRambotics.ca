@@ -58,7 +58,7 @@
 		 * Sets the session if the attempted login credentials are correct.  Returns false if attempted credentials are incorrect.
 		 */
 		public function attemptLogin($user, $pass) {
-			$credentials = explode('::', file_get_contents("../../db/admin_credentials.txt"));
+			$credentials = explode('::', trim(file_get_contents(dirname(__FILE__) . "/../../db/admin_credentials.txt")));
 			
 			if ($user == $credentials[0] && $pass == $credentials[1]) {
 				$_SESSION['authenticated']       = 'true';
@@ -80,7 +80,7 @@
 			$sessionDate = (int)$_SESSION['authentication_date'];
 			$currentDate = (int)date("U");
 			
-			if ($sessionDate + 86400 > $currentDate) {
+			if ($sessionDate + 86400 < $currentDate) {
 				self::reset_session();
 				return false;
 			} else {
