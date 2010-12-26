@@ -12,10 +12,12 @@
     public function Render($templateName) {
       $page = new TemplateProcessing($templateName);
 	  $page = $page->getProcessedPage();
-	  if ($page === false)
-		return Render("404");
+	  if ($page === false) {
+		$page = new TemplateProcessing("404");
+		$page = $page->getProcessedPage();
+	  }
 	
-      return $page->getProcessedPage();
+      return $page;
     } 
     
   }
