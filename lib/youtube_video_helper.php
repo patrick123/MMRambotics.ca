@@ -5,15 +5,16 @@
 	 * @description: Functions to return HTML for YouTube videos from data files stored in db.
 	 */
 	 
-	class YouTubeVideos {
+	class YouTubeHelper {
 
 	  /*
 	   * Returns a hash from the specificed JSON file in the /db/videos directory. 
 	   */
 	  public function getDbData($file) {
+	    echo dirname(__FILE__) . '/db/videos/' . $file;
 	    $data = file_get_contents(dirname(__FILE__) . '/db/videos/' . $file);
-	    $data = json_decode($data);
-	    
+	    $data = json_decode($data, true);
+
 	    return $data;
 	  }	
 	
@@ -106,7 +107,7 @@
 		                  '</object>' .
 		               '</span><br /><br />' .
 		               '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $video['title'] . '</h3></span><br />' .
-		               '<span class="video-carousel-description"><p>' . $video['description'] . '</p></span>'
+		               '<span class="video-carousel-description"><p>' . $video['description'] . '</p></span>' .
 		             '</li>';
 		  }
 		  
@@ -115,5 +116,8 @@
 		}
 		
 	}
+	
+	print_r(YouTubeHelper::getPlaylistsRaw());
+	//echo YouTubeHelper::playlistcarouselHTML("2010_season_video_data_file.json");
 
 ?>
