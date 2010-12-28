@@ -7,16 +7,27 @@ function MenuAppear(withAnimation, elm) {
 	FillSubMenu(subMenuId);
 	
 	if (subMenuId != "") {
-		if (withAnimation) 
-			$("#sub-menu").slideDown(400);
-		else
-			$("#sub-menu").slideDown(0);
+		if (withAnimation) {
+			$("#sub-menu").show();
+			$("#sub-menu").animate({ 
+				width: "520px", 
+				height: "25px"
+			}, 800);
+		} else {
+			$("#sub-menu").show();
+		}
 	}
+}
+
+function MenuInitialize() {
+	$("#sub-menu").css({ 'width': '0px', 'height': '0px' });
 }
 
 $(document).ready(function() {
 
   // Menu
+  	MenuInitialize();
+
 	MenuAppear(false, false);
 
 	$(".sub-nav").click(function() {

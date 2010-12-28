@@ -8,10 +8,10 @@
 		<meta name="Keywords" content="first, robots, robotics competition, frc, mmrambotics, mmrobinson, hdsb, mozilla, jaydeva" />
 		<meta name="Author" content="MMRambotics" />
 		
-		<link rel="stylesheet" type="text/css" href="css/style-splash.css" />
+		<link rel="stylesheet" type="text/css" href="http://mmrambotics.ca/css/style-splash.css" />
 		
-		<link rel="SHORTCUT ICON" href="icons/favicon.ico" />
-		<link rel="apple-touch-icon" href="icons/iphone.png" />
+		<link rel="SHORTCUT ICON" href="http://mmrambotics.ca/icons/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://mmrambotics.caicons/iphone.png" />
 	
 	</head>
 	
@@ -23,7 +23,7 @@
 		
 				<div id="news">
 				
-					<img src="images/news.png" alt="MMRambotics News" title="MMRambotics News" class="header" />
+					<img src="http://mmrambotics.ca/images/news.png" alt="MMRambotics News" title="MMRambotics News" class="header" />
 					
 					<div class="feed-item">
 						<p>
@@ -50,7 +50,7 @@
 				
 				<div id="events">
 				
-					<img src="images/events.png" alt="MMRambotics FIRST Events" title="MMRambotics FIRST Events" class="header" />
+					<img src="http://mmrambotics.ca/images/events.png" alt="MMRambotics FIRST Events" title="MMRambotics FIRST Events" class="header" />
 					
 					<div class="feed-item">
 						<p>
@@ -63,7 +63,7 @@
 			
 				<div id="notices">
 				
-					<img src="images/team-notices.png" alt="MMRambotics Team Notices" title="MMRambotics Team Notices" class="header" />
+					<img src="http://mmrambotics.ca/images/team-notices.png" alt="MMRambotics Team Notices" title="MMRambotics Team Notices" class="header" />
 					
 					<div class="feed-item">
 						<p>
@@ -78,7 +78,7 @@
 			<div class="clear"></div>
 			
 			<div id="enter-full-site">
-				<a href="index.php" title="Enter MMRambotics Full Website"><img src="images/enter-full-site.png" alt="Enter MMRambotics Full Website" title="Enter MMRambotics Full Website" /></a>
+				<a href="/rambotics/index" title="Enter MMRambotics Full Website"><img src="http://mmrambotics.ca/images/enter-full-site.png" alt="Enter MMRambotics Full Website" title="Enter MMRambotics Full Website" /></a>
 			</div>
 				
 		</div>
