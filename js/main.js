@@ -15,6 +15,7 @@ function MenuAppear(withAnimation, elm) {
 			}, 800);
 		} else {
 			$("#sub-menu").show();
+			$("#sub-menu").css({ "width": "520px", "height": "25px" });
 		}
 	}
 }
