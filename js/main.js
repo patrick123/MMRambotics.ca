@@ -12,7 +12,7 @@ function MenuAppear(withAnimation, elm) {
 			$("#sub-menu").animate({ 
 				width: "520px", 
 				height: "25px"
-			}, 800);
+			}, 600);
 		} else {
 			$("#sub-menu").show();
 			$("#sub-menu").css({ "width": "520px", "height": "25px" });
