@@ -22,7 +22,17 @@
 	   * Return a hash of playlist name and filepath.
 	   */
 		public function getPlaylistsRaw() {
-		  return self::getDbData("playlists.json");
+		  $playlists = self::getDbData("playlists.json");
+		  unset($playlists["default"]);
+		  return $playlists;
+		}
+		
+		/*
+		 * Returns the filepath of the default playlist.
+		 */
+		public function getDefaultPlaylistPath() {
+		  $playlists = self::getDbData("playlists.json");
+		  return $playlists[$playlists["default"]];
 		}
 		
 		/*
@@ -117,7 +127,5 @@
 		
 	}
 	
-	print_r(YouTubeHelper::getPlaylistsRaw());
-	//echo YouTubeHelper::playlistcarouselHTML("2010_season_video_data_file.json");
 
 ?>
