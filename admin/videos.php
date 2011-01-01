@@ -14,9 +14,20 @@
 	function displayPlaylistOptions() {
 		$playlists = YouTubeHelper::getPlaylistsRaw();
 		$default   = YouTubeHelper::getDefaultPlaylistPath(); 
+		
+		?>
+		  <table>
+		    <tr>
+		      <th>Playlist</th>
+		      <th>Administer</th>
+		      <th>Default</th>
+		      <th>Delete</th>
+		    </tr> 
+		<?php
+		
+		?>
+		  </table>
+		<?php
 	}
-
-	$playlists = YouTubeHelper::getPlaylistsRaw();
-  
-
+	
 ?>
