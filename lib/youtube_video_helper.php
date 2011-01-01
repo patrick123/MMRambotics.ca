@@ -11,11 +11,18 @@
 	   * Returns a hash from the specificed JSON file in the /db/videos directory. 
 	   */
 	  public function getDbData($file) {
-	    $data = file_get_contents(dirname(__FILE__) . '/db/videos/' . $file);
+	    $data = file_get_contents(self::dbFilePath($file));
 	    $data = json_decode($data, true);
 
 	    return $data;
 	  }	
+    
+    /*
+     * Returns a full file path relative to videos db.
+     */
+    public function dbFilePath($file) {
+      return (dirname(__FILE__) . '/db/videos/' . $file);
+    }
     
     /*
      * Renames a JSON playlist database to 'delete' it.
@@ -23,7 +30,7 @@
     public function deletePlaylist($playlistName) {
       $playlists = self::getPlaylistsRaw(false);
       if (array_key_exists($playlistName, $playlists)) {
-        $playlist = dirname(__FILE__) . '/db/videos/' . $playlists[$playlistName];
+        $playlist = self::dbFilePath($playlists[$playlistName]);
         rename($playlist, $playlist . '_trash');
         
         unset($playlists[$playlistName]);
@@ -35,7 +42,7 @@
      * Edits the playlists JSON database.
      */ 
     function updatePlaylists($playlists) {
-      $db = fopen(dirname(__FILE__) . '/db/videos/playlists.json', "w");
+      $db = fopen(self::dbFilePath('playlists.json'), "w");
       if ($db)
         fwrite($db, json_encode($playlists));
     }
