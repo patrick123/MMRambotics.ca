@@ -11,7 +11,6 @@
 	   * Returns a hash from the specificed JSON file in the /db/videos directory. 
 	   */
 	  public function getDbData($file) {
-	    echo dirname(__FILE__) . '/db/videos/' . $file;
 	    $data = file_get_contents(dirname(__FILE__) . '/db/videos/' . $file);
 	    $data = json_decode($data, true);
 

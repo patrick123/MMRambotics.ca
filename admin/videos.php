@@ -58,7 +58,7 @@
 	else if (isset($_GET["makedefault"]))
 		makeDefaultPlaylist();
 	else if (isset($_GET["delete"]))
-		deletePlaylist()
+		deletePlaylist();
 	else
 		displayPlaylistOptions();
 	
