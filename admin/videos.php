@@ -42,7 +42,33 @@
 	}
 	
 	function displayPlaylistAdministration() {
-	
+    $videos = YouTubeHelper::getVideosFromPlaylistRaw($playlistName);
+    ?>
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>Description</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+    <?php
+    
+      foreach($videos as $videoId => $video) {
+        ?>
+          <tr>
+            <td><?php echo $video["title"]; ?></td>
+            <td><a href="<?php echo $video["url"]; ?>"><?php echo $video["url"]; ?></a></td>
+            <td><?php echo $video["description"]; ?></td>
+            <td><a href="videos.php?editvideo=<?php echo $videoId; ?>">Edit</a></td>
+            <td><a href="videos.php?deletevideo=<?php echo $videoId; ?>">Delete</a></td>
+          </tr>
+        <?php
+      } 
+    
+    ?>
+      </table>
+    <?php
 	}
 	
 	function makeDefaultPlaylist() {
