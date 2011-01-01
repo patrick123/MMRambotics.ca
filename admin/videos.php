@@ -46,7 +46,7 @@
 	}
 	
 	function makeDefaultPlaylist() {
-	
+    YouTubeHelper::makeDefaultPlaylist($_GET["makedefault"]);
 	}
 	
 	function deletePlaylist() {

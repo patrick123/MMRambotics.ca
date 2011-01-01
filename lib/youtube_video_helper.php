@@ -25,6 +25,17 @@
     }
     
     /*
+     * Sets a playlist to the default.
+     */
+    public function makeDefaultPlaylist($playlistName) {
+      $playlists = self::getPlaylistsRaw(false);
+      if (array_key_exists($playlistName, $playlists)) {
+        $playlists["default"] = $playlistName;
+        self::updatePlaylists($playlists);
+      }
+    }
+    
+    /*
      * Renames a JSON playlist database to 'delete' it.
      */
     public function deletePlaylist($playlistName) {
