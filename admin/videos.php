@@ -50,7 +50,7 @@
 	}
 	
 	function deletePlaylist() {
-	
+    YouTubeHelper::deletePlaylist($_GET["delete"]);
 	}
 	
 	if (isset($_GET["administer"]))

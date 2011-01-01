@@ -16,14 +16,39 @@
 
 	    return $data;
 	  }	
+    
+    /*
+     * Renames a JSON playlist database to 'delete' it.
+     */
+    public function deletePlaylist($playlistName) {
+      $playlists = self::getPlaylistsRaw(false);
+      if (array_key_exists($playlistName, $playlists)) {
+        $playlist = dirname(__FILE__) . '/db/videos/' . $playlists[$playlistName];
+        rename($playlist, $playlist . '_trash');
+        
+        unset($playlists[$playlistName]);
+        self::updatePlaylists($playlists);
+      } 
+    }
+    
+    /*
+     * Edits the playlists JSON database.
+     */ 
+    function updatePlaylists($playlists) {
+      $db = fopen(dirname(__FILE__) . '/db/videos/playlists.json', "w");
+      if ($db)
+        fwrite($db, json_encode($playlists));
+    }
 	
 	  /*
 	   * Return a hash of playlist name and filepath.
 	   */
-		public function getPlaylistsRaw() {
+		public function getPlaylistsRaw($removeDefault = true) {
 		  $playlists = self::getDbData("playlists.json");
-		  unset($playlists["default"]);
-		  return $playlists;
+      if ($removeDefault) 
+        unset($playlists["default"]);
+		  
+      return $playlists;
 		}
 		
 		/*
