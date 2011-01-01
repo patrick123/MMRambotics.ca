@@ -125,7 +125,7 @@
 		  $videos = self::getVideosFromPlaylistRaw($playlistFile);
 		  $html   = '<ul id="video-ribbon-bar">';
 		  
-		  foreach ($videos as $video) {
+		  foreach ($videos as $videoId => $video) {
 		    $html .= '<li class="video-ribbon-bar-item">' .
 		               '<span class="video-ribbon-bar-youtube-url">' . $video['url'] . '</span>' .
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
@@ -145,7 +145,7 @@
 		  $html   = '<ul id="video-carousel">';
 		  
 		  $firstVideo = true;
-		  foreach ($videos as $video) {
+		  foreach ($videos as $videoId => $video) {
 		    $class = "video-carousel-item";
 		    if ($firstVideo) {
 		      $firstVideo = false;
