@@ -25,9 +25,30 @@
 		    </tr> 
 		<?php
 		
+		foreach ($playlists as $playlistName => $playlistPath) {
+			?>
+				<tr>
+					<td><?php echo $playlistName; ?></td>
+					<td><a href="videos.php?administer=<?php echo $playlistName; ?>" title="Administer">Administer</a></td>
+					<td><?php echo (($default == $playlistPath) ? 'Is Default' : '<a href="videos.php?makedefault=' . $playlistName . '">Make Default</a>'); ?></td>
+					<td><a href="videos.php?delete=<?php echo $playlistName; ?>">Delete</a></td>
+				</tr>
+			<?php
+		}
+		
 		?>
 		  </table>
 		<?php
 	}
+	
+	
+	if (isset($_GET["administer"]))
+		displayPlaylistAdministration();
+	else if (isset($_GET["makedefault"]))
+		makeDefaultPlaylist();
+	else if (isset($_GET["delete"]))
+		deletePlaylist()
+	else
+		displayPlaylistOptions();
 	
 ?>
