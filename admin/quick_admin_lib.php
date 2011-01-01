@@ -23,8 +23,8 @@
 		/*
 		 * Redirects the user to the panel page.
 		 */
-		public function redirect() {
-			header("Location: http://mmrambotics.ca/admin/panel.php");
+		public function redirect($page = "panel.php") {
+			header("Location: http://mmrambotics.ca/admin/$page");
 			die();
 		}
 		

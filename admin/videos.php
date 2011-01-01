@@ -47,10 +47,12 @@
 	
 	function makeDefaultPlaylist() {
     YouTubeHelper::makeDefaultPlaylist($_GET["makedefault"]);
+    QuickAdmin::redirect("videos.php");
 	}
 	
 	function deletePlaylist() {
     YouTubeHelper::deletePlaylist($_GET["delete"]);
+    QuickAdmin::redirect("videos.php");
 	}
 	
 	if (isset($_GET["administer"]))
