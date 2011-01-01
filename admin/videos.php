@@ -41,6 +41,17 @@
 		<?php
 	}
 	
+	function displayPlaylistAdministration() {
+	
+	}
+	
+	function makeDefaultPlaylist() {
+	
+	}
+	
+	function deletePlaylist() {
+	
+	}
 	
 	if (isset($_GET["administer"]))
 		displayPlaylistAdministration();

@@ -19,7 +19,7 @@
 		?>
 			<ul>
 				<li><a href="photo.php" title="Upload and Edit Photos">Add and Edit Photos</a></li>
-				<li><a href="video.php" title="Add and Edit YouTube Videos">Add and Edit YouTube Videos</a></li>
+				<li><a href="videos.php" title="Add and Edit YouTube Videos">Add and Edit YouTube Videos</a></li>
 				<li><a href="panel.php?action=logout" title="Logout">Logout</a></li>
 			</ul>
 		<?php
