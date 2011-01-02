@@ -121,7 +121,7 @@
 		/*
 		 * Returns the URL for a YouTube thumbnail based off a YouTube video link.
 		 */
-		public function youtubeThumbnail($url) {
+		public function youTubeThumbnail($url) {
 		  $videoId = explode("=", $url);
 		  if (count($videoId) != 2)
 		    return false;
@@ -129,6 +129,22 @@
 		  $videoId = $videoId[1];
 		  return 'http://img.youtube.com/vi/' . $videoId . '/default.jpg';
 		}
+    
+    /*
+     * Generates a YouTube thumbnail <img> tag based on a YouTube URL.
+     */
+    public function generateYouTubeThumbnail($url) {
+      return '<img width="120" height="90" src="' . self::youTubeThumbnail($url) . '" />';
+    }
+    
+    /*
+     * Generated an embedded YouTube video based on a YouTube URL.
+     */ 
+    public function generateYouTubeEmbed($url) {
+      return '<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="' . $url . '">' .
+                '<param name="movie" value="' . $url . '" />' .
+		         '</object>';
+    }
 		
 		/*
 		 * Returns HTML for a ribbon bar of videos from a playlist.
@@ -141,7 +157,7 @@
 		    $html .= '<li class="video-ribbon-bar-item">' .
 		               '<span class="video-ribbon-bar-youtube-url">' . $video['url'] . '</span>' .
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
-		               '<span class="video-ribbon-bar-image"><img width="120" height="90" src="' . self::youtubeThumbnail($video['url']) . '" /></span>' .
+		               '<span class="video-ribbon-bar-image">' . self::generateYouTubeThumbnail($video['url']) . '</span>' .
 		             '</li>';
 		  }
 		  
@@ -166,9 +182,7 @@
 		    
 		    $html .= '<li class="' . $class . '">' .
 		               '<span class="video-carousel-youtube">' .
-		                  '<object type="application/x-shockwave-flash" style="width:480px; height:385px;" data="' . $video['url'] . '">'.
-		                    '<param name="movie" value="' . $video['url'] . '" />' .
-		                  '</object>' .
+                      self::generateYouTubeEmbed($video['url']) . 
 		               '</span><br /><br />' .
 		               '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $video['title'] . '</h3></span><br />' .
 		               '<span class="video-carousel-description"><p>' . $video['description'] . '</p></span>' .
