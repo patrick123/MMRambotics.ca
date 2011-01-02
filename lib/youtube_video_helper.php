@@ -131,6 +131,17 @@
       self::updateIndividualPlaylist(self::dbFilePath($path), $json);
     }
     
+    /*
+     * Deletes a video from a playlist via it's id.
+     */ 
+    public function deleteVideo($videoId, $playlist) {
+      $path = self::getPlaylistPath($playlist);
+      $json = self::getDbData($path);
+      unset($json["data"][$videoId]);
+      
+      self::updateIndividualPlaylist(self::dbFilePath($path), $json);
+    }
+    
 		/*
 		 * Returns HTML for a list of playlists.
 		 */
