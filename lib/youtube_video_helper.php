@@ -52,11 +52,20 @@
     /*
      * Edits the playlists JSON database.
      */ 
-    function updatePlaylists($playlists) {
+    public function updatePlaylists($playlists) {
       $db = fopen(self::dbFilePath('playlists.json'), "w");
       if ($db)
         fwrite($db, json_encode($playlists));
     }
+    
+    /*
+     * Updates an individual playlist's JSON database.
+     */ 
+    public function updateIndividualPlaylist($playlistPath, $newData) {
+      $db = fopen($playlistPath, "w");
+      if ($db)
+        fwrite($db, json_encode($newData));
+    } 
 	
 	  /*
 	   * Return a hash of playlist name and filepath.
@@ -104,6 +113,24 @@
       return $data[$playlistName];
 		}
 		
+    /*
+     * Edits a YouTube video via a video ID and playlist. 
+     */
+    public function editVideo($videoId, $playlist, $title, $url, $description) {
+      $newVideo = array(
+        "title"       => $title,
+        "url"         => $url,
+        "description" => $description
+      );
+      
+      $path  = self::getPlaylistPath($playlist);
+      $json  = self::getDbData($path);
+      $newVideo["date"] = $json["data"][$videoId]["date"];
+      $json["data"][$videoId] = $newVideo;
+      
+      self::updateIndividualPlaylist(self::dbFilePath($path), $json);
+    }
+    
 		/*
 		 * Returns HTML for a list of playlists.
 		 */
