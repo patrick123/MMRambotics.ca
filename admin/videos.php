@@ -16,7 +16,7 @@
 		$default   = YouTubeHelper::getDefaultPlaylistPath(); 
 		
 		?>
-		  <table>
+		  <table border="1">
 		    <tr>
 		      <th>Playlist</th>
 		      <th>Administer</th>
@@ -42,9 +42,10 @@
 	}
 	
 	function displayPlaylistAdministration() {
-    $videos = YouTubeHelper::getVideosFromPlaylistRaw($playlistName);
+    $path   = YouTubeHelper::getPlaylistPath($_GET["administer"]);
+    $videos = YouTubeHelper::getVideosFromPlaylistRaw($path);
     ?>
-      <table>
+      <table border="1">
         <tr>
           <th>Title</th>
           <th>URL</th>

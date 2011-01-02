@@ -90,6 +90,7 @@
 		 */
 		public function getPlaylistPath($playlistName) {
 		  $data = self::getPlaylistsRaw();
+      return $data[$playlistName];
 		}
 		
 		/*
