@@ -73,10 +73,20 @@
 	}
   
   function editSingleVideo() {
+    if (isset($_GET["videoId"]) && isset($_GET["playlist"])) {
+      YouTubeHelper::editVideo($_GET["videoId"], $_GET["playlist"], $_GET["title"], $_GET["url"], $_GET["description"]);
+    }
+
+    QuickAdmin::redirect("videos.php?administer=" . $_GET["playlist"]);
+  }
+  
+  function displayEditVideoForm() {
     $video = YouTubeHelper::getVideoById($_GET["editvideo"], $_GET["playlist"]);
     ?>
       <form method="GET" action="videos.php">
         <input type="hidden" name="videoEdit" value="1" />
+        <input type="hidden" name="videoId" value="<?php echo $_GET["editvideo"]; ?>" />
+        <input type="hidden" name="playlist" value="<?php echo $_GET["playlist"]; ?>" />
         
         <label for="title">Title: </label><br />
         <input type="text" name="title" value="<?php echo $video['title']; ?>" style="width:90%;" />
@@ -119,9 +129,11 @@
 	else if (isset($_GET["delete"]))
 		deletePlaylist();
   else if (isset($_GET["editvideo"]))
-    editSingleVideo();
+    displayEditVideoForm();
   else if (isset($_GET["deletevideo"]))
     deleteSingleVideo();
+  else if (isset($_GET["videoEdit"]))
+    editSingleVideo();
 	else
 		displayPlaylistOptions();
 	
