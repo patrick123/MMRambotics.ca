@@ -61,8 +61,8 @@
             <td><?php echo $video["title"]; ?></td>
             <td><a href="<?php echo $video["url"]; ?>"><?php echo $video["url"]; ?></a></td>
             <td><?php echo $video["description"]; ?></td>
-            <td><a href="videos.php?editvideo=<?php echo $videoId; ?>">Edit</a></td>
-            <td><a href="videos.php?deletevideo=<?php echo $videoId; ?>">Delete</a></td>
+            <td><a href="videos.php?editvideo=<?php echo $videoId; ?>&playlist=<?php echo $_GET["administer"]; ?>">Edit</a></td>
+            <td><a href="videos.php?deletevideo=<?php echo $videoId; ?>&playlist=<?php echo $_GET["administer"]; ?>">Delete</a></td>
           </tr>
         <?php
       } 
@@ -71,6 +71,36 @@
       </table>
     <?php
 	}
+  
+  function editSingleVideo() {
+    $video = YouTubeHelper::getVideoById($_GET["editvideo"], $_GET["playlist"]);
+    ?>
+      <form method="GET" action="videos.php">
+        <input type="hidden" name="videoEdit" value="1" />
+        
+        <label for="title">Title: </label><br />
+        <input type="text" name="title" value="<?php echo $video['title']; ?>" />
+        
+        <br /></br />
+        
+        <label for="url">URL: </label><br />
+        <input type="text" name="url" value="<?php echo $video['url']; ?>" />
+        
+        <br /><br />
+        
+        <label for="description">Description: </label><br />
+        <input type="text" name="description" value="<?php echo $video['description']; ?>" />
+        
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    <?php
+  }
+  
+  function deleteSingleVideo() {
+    YouTubeHelper::deleteVideo($_GET["deletevideo"], $_GET["playlist"]);
+    QuickAdmin::redirect("videos.php?administer=" . $_GET["playlist"]);
+  }
 	
 	function makeDefaultPlaylist() {
     YouTubeHelper::makeDefaultPlaylist($_GET["makedefault"]);
@@ -88,6 +118,10 @@
 		makeDefaultPlaylist();
 	else if (isset($_GET["delete"]))
 		deletePlaylist();
+  else if (isset($_GET["editvideo"]))
+    editSingleVideo();
+  else if (isset($_GET["deletevideo"]))
+    deleteSingleVideo();
 	else
 		displayPlaylistOptions();
 	

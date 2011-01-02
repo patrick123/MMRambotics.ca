@@ -85,6 +85,17 @@
 		  return $data['data'];
 		}
 		
+    /*
+     * Returns a hash of video data based on a video id.
+     */
+    public function getVideoById($id, $playlist) {
+      $playlistPath = self::getPlaylistPath($playlist);
+      $data  = self::getVideosFromPlaylistRaw($playlistPath);
+      $video = $data[$id];
+      
+      return $video;
+    }
+    
 		/*
 		 * Looks up a playlist file path based on name.
 		 */
