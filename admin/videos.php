@@ -79,17 +79,17 @@
         <input type="hidden" name="videoEdit" value="1" />
         
         <label for="title">Title: </label><br />
-        <input type="text" name="title" value="<?php echo $video['title']; ?>" />
+        <input type="text" name="title" value="<?php echo $video['title']; ?>" style="width:90%;" />
         
         <br /></br />
         
         <label for="url">URL: </label><br />
-        <input type="text" name="url" value="<?php echo $video['url']; ?>" />
+        <input type="text" name="url" value="<?php echo $video['url']; ?>" style="width:90%;" />
         
         <br /><br />
         
         <label for="description">Description: </label><br />
-        <input type="text" name="description" value="<?php echo $video['description']; ?>" />
+        <input type="text" name="description" value="<?php echo $video['description']; ?>" style="width:90%;" />
         
         <br />
         <input type="submit" value="Submit" />
