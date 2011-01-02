@@ -38,6 +38,9 @@
 		
 		?>
 		  </table>
+      
+      <hr />
+      <a href="videos.php?addplaylist=add" title="Add Playlist">Add a Playlist</a>
 		<?php
 	}
 	
@@ -69,6 +72,9 @@
     
     ?>
       </table>
+      
+      <hr />
+      <a href="videos.php?addvideo=add" title="Add Playlist">Add a Video</a>
     <?php
 	}
   
@@ -107,6 +113,14 @@
     <?php
   }
   
+  function displayAddVideoForm() {
+  
+  }
+  
+  function displayAddPlaylistForm() {
+  
+  }
+  
   function deleteSingleVideo() {
     YouTubeHelper::deleteVideo($_GET["deletevideo"], $_GET["playlist"]);
     QuickAdmin::redirect("videos.php?administer=" . $_GET["playlist"]);
@@ -134,6 +148,10 @@
     deleteSingleVideo();
   else if (isset($_GET["videoEdit"]))
     editSingleVideo();
+  else if (isset($_GET["addvideo"]))
+    displayAddVideoForm();
+  else if (isset($_GET["addplaylist"]))
+    displayAddPlaylistForm();
 	else
 		displayPlaylistOptions();
 	
