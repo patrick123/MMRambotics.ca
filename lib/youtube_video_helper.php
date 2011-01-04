@@ -59,7 +59,7 @@
       fwrite($db, '{"data":{}}');
       fclose($db);
       
-      $playlists[$playlistName] = self::playlistNameToFile($playlistName);
+      $playlists[$playlistName] = $filePath;
       self::updatePlaylists($playlists);
     }
     
