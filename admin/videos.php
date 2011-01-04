@@ -74,7 +74,7 @@
       </table>
       
       <hr />
-      <a href="videos.php?addvideo=add" title="Add Playlist">Add a Video</a>
+      <a href="videos.php?addvideo=add?playlist=<?php echo $_GET["administer"]; ?>" title="Add Video">Add a Video</a>
     <?php
 	}
   
@@ -114,11 +114,45 @@
   }
   
   function displayAddVideoForm() {
-  
+    ?>
+      <form method="GET" action="videos.php">
+        <input type="hidden" name="videoAdd" value="1" />
+        <input type="hidden" name="playlist" value="<?php echo $_GET["playlist"]; ?>" />
+        
+        <label for="title">Title: </label><br />
+        <input type="text" name="title" />
+        
+        <br /><br />
+        
+        <label for="url">URL: </label><br />
+        <input type="text" name="url" />
+        
+        <br /><br />
+        
+        <label for="description">Description: </label><br />
+        <input type="text" name="description" />
+        
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    <?php
   }
   
   function displayAddPlaylistForm() {
-  
+    ?>
+      <form method="GET" action="videos.php">
+        <input type="hidden" name="playlistAdd" value="1" />
+        
+        <input for="name">Playlist Name: </label><br />
+        <input type="text" name="name" />
+        
+        <br /><br />
+        
+        <input type="checkbox" name="isDefault" value="true">&nbsp;<label for="isDefault">Is Default?</label><br />
+        
+        <input type="submit" value="Submit" />
+      </form>
+    <?php
   }
   
   function deleteSingleVideo() {
@@ -136,6 +170,18 @@
     QuickAdmin::redirect("videos.php");
 	}
 	
+	function addPlaylist() {
+	  YouTubeHelper::addPlaylist($_GET["name"]);
+	  if ($_GET["isDefault"] == "true") 
+	    YouTubeHelper::makeDefaultPlaylist($_GET["name"]);
+	    
+	  QuickAdmin::redirect("videos.php");
+	}
+	
+	function addVideo() {
+	
+	}
+	
 	if (isset($_GET["administer"]))
 		displayPlaylistAdministration();
 	else if (isset($_GET["makedefault"]))
@@ -148,6 +194,10 @@
     deleteSingleVideo();
   else if (isset($_GET["videoEdit"]))
     editSingleVideo();
+  else if (isset($_GET["videoAdd"]))
+    addVideo();
+  else if (isset($_GET["playlistAdd"]))
+    addPlaylist();
   else if (isset($_GET["addvideo"]))
     displayAddVideoForm();
   else if (isset($_GET["addplaylist"]))
