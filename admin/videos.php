@@ -143,7 +143,7 @@
       <form method="GET" action="videos.php">
         <input type="hidden" name="playlistAdd" value="1" />
         
-        <input for="name">Playlist Name: </label><br />
+        <label for="name">Playlist Name: </label><br />
         <input type="text" name="name" />
         
         <br /><br />
