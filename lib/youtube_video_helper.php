@@ -191,7 +191,7 @@
 		  
 		  foreach ($data as $playlistName => $playlistPath) {
 		    $thumb = self::generateYouTubeThumbnail(self::getLatestVideoURL($playlistName));
-		    $html .= '<li class="playlist-link">' . $playlistName . ' <span class="playlist-thumbnail">' . $thumb . '</span></li>';
+		    $html .= '<li class="playlist-link">' . $playlistName . '<span class="playlist-thumbnail">' . $thumb . '</span></li>';
 		  }
 		  
 		  $html .= '</ul>';

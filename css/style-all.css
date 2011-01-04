@@ -144,3 +144,21 @@ div#sub-menu {
 		font-size:19px;
 	}
 /* ~~~End Main Menu~~~ */
+
+/* ~~~YouTube Gallery~~~ */
+ul#video-playlists {
+  list-style:none;
+}
+  ul#video-playlists li.playlist-link {
+    cursor:pointer;
+    float:left;
+    width:130px;
+    background:#000;
+    border:2px solid #333;
+    text-align:center;
+    padding-bottom:2px;
+  }
+    ul#video-playlists li.playlist-link span.playlist-thumbnail {
+      margin-top:3px;
+    }
+/* ~~~End YouTube Gallery~~~ */
