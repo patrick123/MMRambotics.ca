@@ -50,6 +50,27 @@
     }
     
     /*
+     * Adds a playlist to the JSON database.
+     */
+    public function addPlaylist($playlistName) {
+      $playlists = self::getPlaylistsRaw(false);
+      $filePath  = self::playlistNameToFile($playlistName);
+      $db        = fopen(self::dbFilePath($filePath), "w");
+      fwrite($db, '{"data":{}}');
+      fclose($db);
+      
+      $playlists[$playlistName] = self::playlistNameToFile($playlistName);
+      self::updatePlaylists($playlists);
+    }
+    
+    /*
+     * Converts a playlist name to a file path (to be used to write operations only).
+     */ 
+    public function playlistNameToFile($name) {
+      return substr(uniqid(urlencode($name)), 0, 40) . ".json";
+    }
+    
+    /*
      * Edits the playlists JSON database.
      */ 
     public function updatePlaylists($playlists) {
