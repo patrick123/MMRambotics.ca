@@ -186,16 +186,45 @@
 		 * Returns HTML for a list of playlists.
 		 */
 		public function playlistsHTML() {
-		  $data = self::getPlaylistsRaw();
-		  $html = '<ul id="video-playlists">';
+		  $data  = self::getPlaylistsRaw();
+		  $html  = '<ul id="video-playlists">';
 		  
-		  foreach ($data as $playlistName => $playlistPath) 
-		    $html .= '<li class="playlist-link">' . $playlistName . '</li>';
+		  foreach ($data as $playlistName => $playlistPath) {
+		    $thumb = self::generateYouTubeThumbnail(self::getLatestVideoURL($playlistName));
+		    $html .= '<li class="playlist-link">' . $playlistName . ' <span class="playlist-thumbnail">' . $thumb . '</span></li>';
+		  }
 		  
 		  $html .= '</ul>';
 		  return $html;
 		}
 		
+		/*
+		 * Predicate function for comparing video dates.
+		 */
+		public function cmp($a, $b) {
+		  return strcmp($a['date'], $b['date']);
+		}
+		
+		/*
+		 * Gets the URL of the latest YouTube video in a playlist.
+		 */
+		public function getLatestVideoURL($playlistName) {
+		  $path   = self::getPlaylistPath($playlistName);
+      $json   = self::getDbData($path); 
+      $json   = $json["data"];
+      $videos = array(); 
+		  
+		  foreach ($json as $videoId => $video) {
+		    $videos[] = array(
+		      "url"  => $video["url"],
+		      "date" => $video["date"]
+		    );
+		  } 
+		  
+		  usort($videos, array(self, "cmp"));
+		  return $videos[0]["url"];
+		}
+		 	
 		/*
 		 * Returns the URL for a YouTube thumbnail based off a YouTube video link.
 		 */

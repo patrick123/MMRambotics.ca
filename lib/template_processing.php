@@ -6,6 +6,7 @@
    */
 
   require_once(dirname(__FILE__) . '/configuration.php');
+  require_once(dirname(__FILE__) . '/youtube_video_helper.php');
 
   /*
    * Processes a template file with partials and variables.
@@ -90,6 +91,9 @@
         switch (parent::getVariableName($match)) {
           case "title":
             $this->replaceTemplateContents($match, Configuration::getValue('base_title'));
+            break;
+          case "playlists":
+            $this->replaceTemplateContents($match, YouTubeHelper::playlistsHTML());
             break;
           default:
             $this->replaceTemplateContents($match, "Processing error.");
