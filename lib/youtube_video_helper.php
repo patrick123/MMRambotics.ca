@@ -201,7 +201,7 @@
 		/*
 		 * Predicate function for comparing video dates.
 		 */
-		public function cmp($a, $b) {
+		public function dateCompare($a, $b) {
 		  return strcmp($a['date'], $b['date']);
 		}
 		
@@ -221,7 +221,7 @@
 		    );
 		  } 
 		  
-		  usort($videos, array(self, "cmp"));
+		  usort($videos, array(self, "dateCompare"));
 		  return $videos[0]["url"];
 		}
 		 	
@@ -241,7 +241,11 @@
      * Generates a YouTube thumbnail <img> tag based on a YouTube URL.
      */
     public function generateYouTubeThumbnail($url) {
-      return '<img width="120" height="90" src="' . self::youTubeThumbnail($url) . '" />';
+      $finalURL = self::youTubeThumbnail($url);
+      if (empty($finalURL))
+        return '';
+        
+      return '<img width="120" height="90" src="' . $finalURL . '" />';
     }
     
     /*
