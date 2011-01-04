@@ -64,6 +64,25 @@
     }
     
     /*
+     * Adds a new YouTube video to an individual playlist's JSON database.
+     */
+    public function addVideo($url, $title, $description, $playlist) {
+      $newVideo = array(
+        "url"         => $url,
+        "title"       => $title,
+        "description" => $description,
+        "date"        => date("U")
+      );
+      
+      $videoId = uniqid();
+      $path    = self::getPlaylistPath($playlist);
+      $json    = self::getDbData($path);
+      $json["data"][$videoId] = $newVideo;
+      
+      self::updateIndividualPlaylist(self::dbFilePath($path), $json);
+    }
+    
+    /*
      * Converts a playlist name to a file path (to be used to write operations only).
      */ 
     public function playlistNameToFile($name) {

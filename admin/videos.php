@@ -74,7 +74,7 @@
       </table>
       
       <hr />
-      <a href="videos.php?addvideo=add?playlist=<?php echo $_GET["administer"]; ?>" title="Add Video">Add a Video</a>
+      <a href="videos.php?addvideo=add&playlist=<?php echo $_GET["administer"]; ?>" title="Add Video">Add a Video</a>
     <?php
 	}
   
@@ -179,7 +179,8 @@
 	}
 	
 	function addVideo() {
-	
+	  YouTubeHelper::addVideo($_GET["url"], $_GET["title"], $_GET["description"], $_GET["playlist"]);
+	  QuickAdmin::redirect("videos.php?administer=" . $_GET["playlist"]);
 	}
 	
 	if (isset($_GET["administer"]))
