@@ -161,4 +161,26 @@ ul#video-playlists {
     ul#video-playlists li.playlist-link span.playlist-thumbnail {
       margin-top:3px;
     }
+    span.playlist-name {
+      display:none;
+    }
+
+div#lightbox-container {
+  position:static;
+  top:0px;
+  width:0px;
+  height:100%;
+  width:100%;
+  z-index:3;
+  display:none;
+}
+  div#playlist-lightbox {
+    margin:0 auto;
+    width:1024px;
+    height:600px;
+    background-color:#333;
+    border-radius:10px;
+  }
+
 /* ~~~End YouTube Gallery~~~ */
+

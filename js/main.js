@@ -24,10 +24,28 @@ function MenuInitialize() {
 	$("#sub-menu").css({ 'width': '0px', 'height': '0px' });
 }
 
+function ShowPlaylistLightbox(playlistName) {
+  $.ajax({
+    url: '/lib/playlist_request.php',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+      name: playlistName
+    },
+    error: function() {
+      alert("Unable to get playlist.");
+    },
+    success: function(data) {
+      $("#playlist-current-video").html(data.video);
+      $("#playlist-carousel").html(data.carousel);
+    }
+  });
+}
+
 $(document).ready(function() {
 
   // Menu
-  	MenuInitialize();
+  MenuInitialize();
 
 	MenuAppear(false, false);
 
@@ -35,5 +53,11 @@ $(document).ready(function() {
 		MenuAppear(true, $(this));
 		writeCookie("current_menu", $(this).attr("id"));
 	});
+
+  // Playlist Lightbox
+  $(".playlist-link").click(function() {
+    var playlistName = $(this).children(".playlist-name").text();  
+    ShowPlaylistLightbox(playlistName);
+  });
 
 });

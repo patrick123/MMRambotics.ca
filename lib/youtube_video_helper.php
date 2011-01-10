@@ -191,7 +191,7 @@
 		  
 		  foreach ($data as $playlistName => $playlistPath) {
 		    $thumb = self::generateYouTubeThumbnail(self::getLatestVideoURL($playlistName));
-		    $html .= '<li class="playlist-link">' . $playlistName . '<span class="playlist-thumbnail">' . $thumb . '</span></li>';
+		    $html .= '<li class="playlist-link">' . $playlistName . '<span class="playlist-name">' . $playlistName . '</span><span class="playlist-thumbnail">' . $thumb . '</span></li>';
 		  }
 		  
 		  $html .= '</ul>';
@@ -209,22 +209,26 @@
 		 * Gets the URL of the latest YouTube video in a playlist.
 		 */
 		public function getLatestVideoURL($playlistName) {
-		  $path   = self::getPlaylistPath($playlistName);
-      $json   = self::getDbData($path); 
-      $json   = $json["data"];
-      $videos = array(); 
-		  
-		  foreach ($json as $videoId => $video) {
-		    $videos[] = array(
-		      "url"  => $video["url"],
-		      "date" => $video["date"]
-		    );
-		  } 
-		  
-		  usort($videos, array(self, "dateCompare"));
+		  $videos = self::getVideosChronological($playlistName);
 		  return $videos[0]["url"];
-		}
-		 	
+    }
+
+    /*
+     * Gets an array of videos in chronological order.
+		 */
+    public function getVideosChronological($playlistName) {
+      $path   = self::getPlaylistPath($playlistName);
+      $json   = self::getDbData($path);
+      $json   = $json["data"];
+      $videos = array();
+
+      foreach ($json as $videoId => $video) 
+        $videos[] = $video;
+
+      usort($videos, array(self, "dateCompare"));
+      return $videos;
+    }
+
 		/*
 		 * Returns the URL for a YouTube thumbnail based off a YouTube video link.
 		 */

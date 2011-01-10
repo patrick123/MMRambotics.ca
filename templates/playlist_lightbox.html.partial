@@ -1,11 +1,14 @@
-<div id="playlist-lightbox">
+<div id="lightbox-container">
+
+  <div id="playlist-lightbox">
   
-  <div id="playlist-current-video">
+    <div id="playlist-current-video">
 
+    </div>
+
+    <div id="playlist-carousel">
+
+    </div>
+  
   </div>
-
-  <div id="playlist-carousel">
-
-  </div>
-
 </div>
