@@ -36,8 +36,10 @@ function ShowPlaylistLightbox(playlistName) {
       alert("Unable to get playlist.");
     },
     success: function(data) {
-      $("#playlist-current-video").html(data.video);
       $("#playlist-carousel").html(data.carousel);
+      $("#playlist-ribbonbar").html(data.ribbon);
+
+      $("#lightbox-container").fadeIn(500);
     }
   });
 }

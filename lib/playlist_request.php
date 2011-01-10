@@ -8,11 +8,14 @@
   require_once("youtube_video_helper.php");
 
   if (isset($_POST["name"])) {
-    
-    $returnData   = array("video" => "", "carousel" => "");
-    $playlistPath = YouTubeHelper::getPlaylistPath($_POST["name"]);
-    $data         = YouTubeHelper::getVideosFromPlaylistRaw($playlistPath);
-    $defaultURL   = YouTubeHelper::getLatestVideoURL($_POST["name"]);
+
+    $path = YouTubeHelper::getPlaylistPath($_POST["name"]);
+    $data = array(
+      "carousel" => YouTubeHelper::playlistCarouselHTML($path),
+      "ribbon"   => YouTubeHelper::playlistRibbonBarHTML($path)
+    );    
+
+    echo json_encode($data);
 
   }
 

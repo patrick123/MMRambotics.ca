@@ -209,16 +209,15 @@
 		 * Gets the URL of the latest YouTube video in a playlist.
 		 */
 		public function getLatestVideoURL($playlistName) {
-		  $videos = self::getVideosChronological($playlistName);
+      $videos = self::getVideosChronological(self::getPlaylistPath($playlistName));
 		  return $videos[0]["url"];
     }
 
     /*
      * Gets an array of videos in chronological order.
 		 */
-    public function getVideosChronological($playlistName) {
-      $path   = self::getPlaylistPath($playlistName);
-      $json   = self::getDbData($path);
+    public function getVideosChronological($playlistPath) {
+      $json   = self::getDbData($playlistPath);
       $json   = $json["data"];
       $videos = array();
 
@@ -265,7 +264,7 @@
 		 * Returns HTML for a ribbon bar of videos from a playlist.
 		 */ 
 		public function playlistRibbonBarHTML($playlistFile) {
-		  $videos = self::getVideosFromPlaylistRaw($playlistFile);
+		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-ribbon-bar">';
 		  
 		  foreach ($videos as $videoId => $video) {
@@ -284,7 +283,7 @@
 		 * Returns HTML for a carousel of videos from a playlist.
 		 */
 		public function playlistCarouselHTML($playlistFile) {
-		  $videos = self::getVideosFromPlaylistRaw($playlistFile);
+		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-carousel">';
 		  
 		  $firstVideo = true;
