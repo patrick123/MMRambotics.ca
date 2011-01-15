@@ -232,7 +232,7 @@
 		 * Returns the URL for a YouTube thumbnail based off a YouTube video link.
 		 */
 		public function youTubeThumbnail($url) {
-		  $videoId = explode("=", $url);
+      $videoId = explode("/v/", $url);
 		  if (count($videoId) != 2)
 		    return false;
 		    
@@ -266,13 +266,15 @@
 		public function playlistRibbonBarHTML($playlistFile) {
 		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-ribbon-bar">';
-		  
+
+      $class = 'video-ribbon-bar-item current';
 		  foreach ($videos as $videoId => $video) {
-		    $html .= '<li class="video-ribbon-bar-item">' .
+		    $html .= '<li class="' . $class . '">' .
 		               '<span class="video-ribbon-bar-youtube-url">' . $video['url'] . '</span>' .
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
 		               '<span class="video-ribbon-bar-image">' . self::generateYouTubeThumbnail($video['url']) . '</span>' .
-		             '</li>';
+                   '</li>';
+        $class = 'video-ribbon-bar-item';
 		  }
 		  
 		  $html .= '</ul>';

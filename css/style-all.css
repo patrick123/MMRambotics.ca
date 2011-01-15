@@ -177,43 +177,68 @@ div#lightbox-container {
   div#lightbox-container div#playlist-lightbox {
     margin:100px auto;
     width:900px;
-    height:400px;
-    background-color:#fff;
-    border-radius:10px;
+    min-height:540px;
+    background-color:#333;
     color:#000;
   }
     div#lightbox-container div#playlist-lightbox div#playlist-carousel {
       float:left;
       width:480px;
+      min-height:540px;
+      padding:25px 0px 0px 5px;
     }
+      ul#video-carousel {
+        list-style:none;
+      }
+        ul#video-carousel li {
+          display:none;
+        }
+        ul#video-carousel li.video-carousel-current-item {
+          display:block;
+        }
     div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar {
       float:right;
       width:370px;
       background-color:#000;
-      border-top-right-radius:10px;
+      padding:0px;
+      margin:0px;
+      height:600px;
     }
       div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar {
         list-style:none;
         padding:5px;
       }
-        div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li {
+        ul#video-ribbon-bar li {
           max-height:30px;
           height:30px;
           overflow:hidden;
+          margin:0px;
+          padding:0px;
+          width:350px;
+          padding:5px;
+          border-bottom:3px solid #333;
+          cursor:pointer;
         }
-          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li .video-ribbon-bar-youtube-url {
+        ul#video-ribbon-bar li.current {
+          border-left:2px solid #39f;
+        }
+          ul#video-ribbon-bar li .video-ribbon-bar-youtube-url {
             display:none;
           }
-          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li img {
-            height:25px;
+          ul#video-ribbon-bar li .video-ribbon-bar-image {
             width:25px;
+            margin:0px;
+            padding:0px;
             float:left;
           }
-          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li .video-ribbon-bar-title {
-            float:right;
+          ul#video-ribbon-bar li img {
+            height:25px;
+            width:25px;
+          }
+          ul#video-ribbon-bar li .video-ribbon-bar-title {
+            float:left;
             width:320px;
             margin-top:3px;
           }
-      
 /* ~~~End YouTube Gallery~~~ */
 
