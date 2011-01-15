@@ -222,9 +222,6 @@ div#lightbox-container {
         ul#video-ribbon-bar li.current {
           border-left:2px solid #39f;
         }
-          ul#video-ribbon-bar li .video-ribbon-bar-youtube-url {
-            display:none;
-          }
           ul#video-ribbon-bar li .video-ribbon-bar-image {
             width:25px;
             margin:0px;

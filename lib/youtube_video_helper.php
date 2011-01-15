@@ -269,8 +269,8 @@
 
       $class = 'video-ribbon-bar-item current';
 		  foreach ($videos as $videoId => $video) {
-		    $html .= '<li class="' . $class . '">' .
-		               '<span class="video-ribbon-bar-youtube-url">' . $video['url'] . '</span>' .
+        $html .= '<li class="' . $class . '">' .
+                   '<input type="hidden" value="' . htmlentities(self::carouselVideoHTML("video-carousel-item video-carousel-current-item", $video['url'], $video['title'], $video['description'])) . '" />' . 
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
 		               '<span class="video-ribbon-bar-image">' . self::generateYouTubeThumbnail($video['url']) . '</span>' .
                    '</li>';
@@ -280,6 +280,19 @@
 		  $html .= '</ul>';
 		  return $html;
 		}
+
+    /*
+     * Returns HTML for a single video.
+     */
+    public function carouselVideoHTML($class, $url, $title, $description) {
+      return '<li class="' . $class . '">' .
+        '<span class="video-carousel-youtube">' .
+          self::generateYouTubeEmbed($url) .
+        '</span>' .
+        '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $title . '</h3></span><br />' .
+        '<span class="video-carousel-description"><p>' . $description . '</p></span>' .
+        '</li>';
+    }
 		
 		/* 
 		 * Returns HTML for a carousel of videos from a playlist.
@@ -288,22 +301,11 @@
 		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-carousel">';
 		  
-		  $firstVideo = true;
+      $class = "video-carousel-item video-carousel-current-item";
 		  foreach ($videos as $videoId => $video) {
-		    $class = "video-carousel-item";
-		    if ($firstVideo) {
-		      $firstVideo = false;
-		      $class .= " video-carousel-current-item";
-		    }
-		    
-		    $html .= '<li class="' . $class . '">' .
-		               '<span class="video-carousel-youtube">' .
-                      self::generateYouTubeEmbed($video['url']) . 
-		               '</span><br /><br />' .
-		               '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $video['title'] . '</h3></span><br />' .
-		               '<span class="video-carousel-description"><p>' . $video['description'] . '</p></span>' .
-		             '</li>';
-		  }
+        $html .= self::carouselVideoHTML($class, $video['url'], $video['title'], $video['description']);
+        $class = "video-carousel-item";
+      }
 		  
 		  $html .= '</ul>';
 		  return $html;
