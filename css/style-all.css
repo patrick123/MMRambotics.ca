@@ -180,6 +180,40 @@ div#lightbox-container {
     height:400px;
     background-color:#fff;
     border-radius:10px;
+    color:#000;
   }
+    div#lightbox-container div#playlist-lightbox div#playlist-carousel {
+      float:left;
+      width:480px;
+    }
+    div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar {
+      float:right;
+      width:370px;
+      background-color:#000;
+      border-top-right-radius:10px;
+    }
+      div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar {
+        list-style:none;
+        padding:5px;
+      }
+        div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li {
+          max-height:30px;
+          height:30px;
+          overflow:hidden;
+        }
+          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li .video-ribbon-bar-youtube-url {
+            display:none;
+          }
+          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li img {
+            height:25px;
+            width:25px;
+            float:left;
+          }
+          div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar li .video-ribbon-bar-title {
+            float:right;
+            width:320px;
+            margin-top:3px;
+          }
+      
 /* ~~~End YouTube Gallery~~~ */
 
