@@ -44,6 +44,16 @@ function ShowPlaylistLightbox(playlistName) {
   });
 }
 
+function RemoveAllCurrentClasses() {
+  $("ul#video-carousel").children().each(function() {
+    $(this).removeClass("video-carousel-current-item");
+  });
+
+  $("ul#video-ribbon-bar").children().each(function() {
+    $(this).removeClass("current");
+  });
+}
+
 $(document).ready(function() {
 
   // Menu
@@ -61,5 +71,11 @@ $(document).ready(function() {
     var playlistName = $(this).children(".playlist-name").text();  
     ShowPlaylistLightbox(playlistName);
   });
+
+  $(".video-ribbon-bar-item").live('click', function() {
+    RemoveAllCurrentClasses();
+    $("ul#video-carousel").append($(this).children(".video-content").attr("value"));
+    $(this).addClass("current");
+  }); 
 
 });

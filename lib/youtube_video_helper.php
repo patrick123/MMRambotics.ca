@@ -270,7 +270,7 @@
       $class = 'video-ribbon-bar-item current';
 		  foreach ($videos as $videoId => $video) {
         $html .= '<li class="' . $class . '">' .
-                   '<input type="hidden" value="' . htmlentities(self::carouselVideoHTML("video-carousel-item video-carousel-current-item", $video['url'], $video['title'], $video['description'])) . '" />' . 
+                   '<input type="hidden" class="video-content" value="' . htmlentities(self::carouselVideoHTML("video-carousel-item video-carousel-current-item", $video['url'], $video['title'], $video['description'])) . '" />' . 
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
 		               '<span class="video-ribbon-bar-image">' . self::generateYouTubeThumbnail($video['url']) . '</span>' .
                    '</li>';
