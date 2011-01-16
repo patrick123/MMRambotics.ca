@@ -28,7 +28,8 @@
       
         // General Site
         'base_title' => 'MMRambotics FRC #2200',
-        
+        'base_site'  => 'http://mmrambotics.ca',
+
         // File paths
         'template_filepath_root'  => 'templates',
         'template_file_extension' => '.html.template',

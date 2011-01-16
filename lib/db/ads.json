@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Anixter",
+    "image": "anixter.jpg",
+    "link": "http://www.anixter.ca"
+  },
+  {
+    "title": "Boca Bearing Company",
+    "image": "boca_bearing.jpg",
+    "link": "http://www.bocabearings.com"
+  },
+  {
+    "title": "Atyical Clothing Company",
+    "image": "atypical_clothing.jpg",
+    "link": "http://www.atypicalclothing.com"
+  },
+  {
+    "title": "Canadian Host",
+    "image": "canadian_host.jpg",
+    "link": "http://www.canadianhost.ca"
+  },
+  {
+    "title": "RobotShop",
+    "image": "robot_shop.jpg",
+    "link": "http://www.robotshop.com"
+  }
+]
