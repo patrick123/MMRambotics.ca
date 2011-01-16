@@ -40,6 +40,7 @@ function ShowPlaylistLightbox(playlistName) {
       $("#playlist-ribbonbar").html(data.ribbon);
 
       $("#lightbox-container").fadeIn(500);
+      $.lightboxOpen = true;
     }
   });
 }
@@ -56,6 +57,7 @@ function RemoveAllCurrentClasses() {
 
 $(document).ready(function() {
 
+  $.lightboxOpen = false;
   // Menu
   MenuInitialize();
 
@@ -76,6 +78,19 @@ $(document).ready(function() {
     RemoveAllCurrentClasses();
     $("ul#video-carousel").append($(this).children(".video-content").attr("value"));
     $(this).addClass("current");
-  }); 
+  });
+
+  $("body").click(function(mouse) {
+    var width  = $("#playlist-lightbox").width();
+    var c      = $("#playlist-lightbox").offset();
+    var height = $("#playlist-lightbox").height();
+    if (mouse.pageX < c.left || mouse.pageX > c.left + width || mouse.pageY < c.top || mouse.pageY > c.top + height) {
+      if ($.lightboxOpen) {
+        $("#lightbox-container").fadeOut(500);
+        $("#lightbox-container").css("display", "none");
+        $.lightboxOpen = false;
+      }
+    }
+  });
 
 });

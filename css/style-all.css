@@ -180,6 +180,7 @@ div#lightbox-container {
     min-height:540px;
     background-color:#333;
     color:#000;
+    border:6px solid #ddd;
   }
     div#lightbox-container div#playlist-lightbox div#playlist-carousel {
       float:left;
@@ -202,7 +203,7 @@ div#lightbox-container {
       background-color:#000;
       padding:0px;
       margin:0px;
-      height:600px;
+      height:540px;
     }
       div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar {
         list-style:none;
