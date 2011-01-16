@@ -285,13 +285,11 @@
      * Returns HTML for a single video.
      */
     public function carouselVideoHTML($class, $url, $title, $description) {
-      return '<li class="' . $class . '">' .
-        '<span class="video-carousel-youtube">' .
-          self::generateYouTubeEmbed($url) .
-        '</span>' .
-        '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $title . '</h3></span><br />' .
-        '<span class="video-carousel-description"><p>' . $description . '</p></span>' .
-        '</li>';
+      return '<span class="video-carousel-youtube">' .
+               self::generateYouTubeEmbed($url) .
+             '</span>' .
+             '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $title . '</h3></span><br />' .
+             '<span class="video-carousel-description"><p>' . $description . '</p></span>';
     }
 		
 		/* 
@@ -299,15 +297,14 @@
 		 */
 		public function playlistCarouselHTML($playlistFile) {
 		  $videos = self::getVideosChronological($playlistFile);
-		  $html   = '<ul id="video-carousel">';
+		  $html   = '<div id="video-carousel">';
 		  
-      $class = "video-carousel-item video-carousel-current-item";
 		  foreach ($videos as $videoId => $video) {
         $html .= self::carouselVideoHTML($class, $video['url'], $video['title'], $video['description']);
-        $class = "video-carousel-item";
+        break;
       }
 		  
-		  $html .= '</ul>';
+		  $html .= '</div>';
 		  return $html;
 		}
 		
