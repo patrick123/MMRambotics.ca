@@ -86,8 +86,9 @@ $(document).ready(function() {
     var height = $("#playlist-lightbox").height();
     if (mouse.pageX < c.left || mouse.pageX > c.left + width || mouse.pageY < c.top || mouse.pageY > c.top + height) {
       if ($.lightboxOpen) {
+        $(".video-carousel-youtube").hide();
         $("#lightbox-container").fadeOut(500);
-        $("#lightbox-container").css("display", "none");
+        $(".video-carousel.youtube").show(); // Small hack due to Flash content not fading out.
         $.lightboxOpen = false;
       }
     }
