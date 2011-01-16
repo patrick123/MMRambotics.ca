@@ -46,10 +46,6 @@ function ShowPlaylistLightbox(playlistName) {
 }
 
 function RemoveAllCurrentClasses() {
-  $("ul#video-carousel").children().each(function() {
-    $(this).removeClass("video-carousel-current-item");
-  });
-
   $("ul#video-ribbon-bar").children().each(function() {
     $(this).removeClass("current");
   });
@@ -76,7 +72,7 @@ $(document).ready(function() {
 
   $(".video-ribbon-bar-item").live('click', function() {
     RemoveAllCurrentClasses();
-    $("ul#video-carousel").append($(this).children(".video-content").attr("value"));
+    $("div#video-carousel").html($(this).children(".video-content").attr("value"));
     $(this).addClass("current");
   });
 

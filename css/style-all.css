@@ -188,15 +188,6 @@ div#lightbox-container {
       min-height:540px;
       padding:25px 0px 0px 5px;
     }
-      ul#video-carousel {
-        list-style:none;
-      }
-        ul#video-carousel li {
-          display:none;
-        }
-        ul#video-carousel li.video-carousel-current-item {
-          display:block;
-        }
     div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar {
       float:right;
       width:370px;
@@ -205,6 +196,9 @@ div#lightbox-container {
       margin:0px;
       height:540px;
     }
+      div#lightbox-container div#playlist-lightbox div#playlist-carousel div#video-carousel {
+        margin-left:18px;
+      }
       div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar {
         list-style:none;
         padding:5px;
