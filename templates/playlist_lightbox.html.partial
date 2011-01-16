@@ -1,0 +1,6 @@
+<div id="lightbox-container">
+	<div id="playlist-lightbox">
+		<div id="playlist-carousel"></div>
+		<div id="playlist-ribbonbar"></div>
+	</div>
+</div>

@@ -144,3 +144,99 @@ div#sub-menu {
 		font-size:19px;
 	}
 /* ~~~End Main Menu~~~ */
+
+/* ~~~YouTube Gallery~~~ */
+ul#video-playlists {
+  list-style:none;
+}
+  ul#video-playlists li.playlist-link {
+    cursor:pointer;
+    float:left;
+    width:130px;
+    background:#000;
+    border:2px solid #333;
+    text-align:center;
+    padding-bottom:2px;
+  }
+    ul#video-playlists li.playlist-link span.playlist-thumbnail {
+      margin-top:3px;
+    }
+    span.playlist-name {
+      display:none;
+    }
+
+div#lightbox-container {
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  z-index:3;
+  display:none;
+}
+  div#lightbox-container div#playlist-lightbox {
+    margin:100px auto;
+    width:900px;
+    min-height:540px;
+    background-color:#333;
+    color:#000;
+    border:6px solid #ddd;
+  }
+    div#lightbox-container div#playlist-lightbox div#playlist-carousel {
+      float:left;
+      width:480px;
+      min-height:540px;
+      padding:25px 0px 0px 5px;
+    }
+      ul#video-carousel {
+        list-style:none;
+      }
+        ul#video-carousel li {
+          display:none;
+        }
+        ul#video-carousel li.video-carousel-current-item {
+          display:block;
+        }
+    div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar {
+      float:right;
+      width:370px;
+      background-color:#000;
+      padding:0px;
+      margin:0px;
+      height:540px;
+    }
+      div#lightbox-container div#playlist-lightbox div#playlist-ribbonbar ul#video-ribbon-bar {
+        list-style:none;
+        padding:5px;
+      }
+        ul#video-ribbon-bar li {
+          max-height:30px;
+          height:30px;
+          overflow:hidden;
+          margin:0px;
+          padding:0px;
+          width:350px;
+          padding:5px;
+          border-bottom:3px solid #333;
+          cursor:pointer;
+        }
+        ul#video-ribbon-bar li.current {
+          border-left:2px solid #39f;
+        }
+          ul#video-ribbon-bar li .video-ribbon-bar-image {
+            width:25px;
+            margin:0px;
+            padding:0px;
+            float:left;
+          }
+          ul#video-ribbon-bar li img {
+            height:25px;
+            width:25px;
+          }
+          ul#video-ribbon-bar li .video-ribbon-bar-title {
+            float:left;
+            width:320px;
+            margin-top:3px;
+          }
+/* ~~~End YouTube Gallery~~~ */
+

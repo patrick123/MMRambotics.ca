@@ -25,6 +25,13 @@
 				
 					<img src="http://mmrambotics.ca/images/news.png" alt="MMRambotics News" title="MMRambotics News" class="header" />
 					
+          <div class="feed-item">
+            <p>
+              <span class="highlight">January 8th 2010</span><br />
+              <a href="http://mmrambotics.ca/rambotics/retroreflector_test" title="MMRambotics #2200 Retroreflector Testing">Testing out</a> things (retroreflector!) in the new kit of parts.
+            </p>
+          </div>
+          
 					<div class="feed-item">
 						<p>
 							<span class="highlight">November 21st 2010</span><br />
@@ -38,13 +45,6 @@
 							Please welcome our newest sponsor <a href="http://bocabearings.com" title="Boca Bearing Company" target="_blank">Boca Bearing Company</a>.
 						</p>
 					</div>
-					
-					<div class="feed-item">
-						<p>
-							<span class="highlight">October 6th 2010</span><br />
-							A big welcome to our newest sponsor <a href="http://www.mgchemicals.com" title="MG Chemicals" target="_blank">MG Chemicals</a>!
-						</p>
-					</div>
 				
 				</div>
 				
@@ -52,19 +52,32 @@
 				
 					<img src="http://mmrambotics.ca/images/events.png" alt="MMRambotics FIRST Events" title="MMRambotics FIRST Events" class="header" />
 					
+          <div class="feed-item">
+            <p>
+              <span class="highlight">January 8th 2011</span><br />
+              2011 <a href="http://usfirst.org/roboticsprograms/frc/default.aspx?id=966" title="FIRST Robotics LogoMotion">LogoMotion</a> game released!
+            </p>  
+          </div>
+          
 					<div class="feed-item">
-						<p>
-							<span class="highlight">To Be Decided</span><br />
-							MMRambotics will be hosting a presentation on this years C++ beta content.  Please check back for details.
-						</p>
+            <p>
+              <span class="highlight">January 8th 2011</span><br />
+              FIRST Robotics Competition 2011 Kickoff
+            </p>
 					</div>
-					
+          
 				</div>
 			
 				<div id="notices">
 				
 					<img src="http://mmrambotics.ca/images/team-notices.png" alt="MMRambotics Team Notices" title="MMRambotics Team Notices" class="header" />
 					
+          <div class="feed-item">
+            <p>
+              <span class="highlight">Team,</span> there will be a meeting on Monday January 10th after school, see you all there.
+            </p>
+          </div>
+          
 					<div class="feed-item">
 						<p>
 							<span class="highlight">Team,</span> there will be a meeting on Thursday November 25th, see you all there.

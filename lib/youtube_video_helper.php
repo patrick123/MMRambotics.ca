@@ -186,21 +186,53 @@
 		 * Returns HTML for a list of playlists.
 		 */
 		public function playlistsHTML() {
-		  $data = self::getPlaylistsRaw();
-		  $html = '<ul id="video-playlists">';
+		  $data  = self::getPlaylistsRaw();
+		  $html  = '<ul id="video-playlists">';
 		  
-		  foreach ($data as $playlistName => $playlistPath) 
-		    $html .= '<li class="playlist-link">' . $playlistName . '</li>';
+		  foreach ($data as $playlistName => $playlistPath) {
+		    $thumb = self::generateYouTubeThumbnail(self::getLatestVideoURL($playlistName));
+		    $html .= '<li class="playlist-link">' . $playlistName . '<span class="playlist-name">' . $playlistName . '</span><span class="playlist-thumbnail">' . $thumb . '</span></li>';
+		  }
 		  
 		  $html .= '</ul>';
 		  return $html;
 		}
 		
 		/*
+		 * Predicate function for comparing video dates.
+		 */
+		public function dateCompare($a, $b) {
+		  return strcmp($a['date'], $b['date']);
+		}
+		
+		/*
+		 * Gets the URL of the latest YouTube video in a playlist.
+		 */
+		public function getLatestVideoURL($playlistName) {
+      $videos = self::getVideosChronological(self::getPlaylistPath($playlistName));
+		  return $videos[0]["url"];
+    }
+
+    /*
+     * Gets an array of videos in chronological order.
+		 */
+    public function getVideosChronological($playlistPath) {
+      $json   = self::getDbData($playlistPath);
+      $json   = $json["data"];
+      $videos = array();
+
+      foreach ($json as $videoId => $video) 
+        $videos[] = $video;
+
+      usort($videos, array(self, "dateCompare"));
+      return $videos;
+    }
+
+		/*
 		 * Returns the URL for a YouTube thumbnail based off a YouTube video link.
 		 */
 		public function youTubeThumbnail($url) {
-		  $videoId = explode("=", $url);
+      $videoId = explode("/v/", $url);
 		  if (count($videoId) != 2)
 		    return false;
 		    
@@ -212,7 +244,11 @@
      * Generates a YouTube thumbnail <img> tag based on a YouTube URL.
      */
     public function generateYouTubeThumbnail($url) {
-      return '<img width="120" height="90" src="' . self::youTubeThumbnail($url) . '" />';
+      $finalURL = self::youTubeThumbnail($url);
+      if (empty($finalURL))
+        return '';
+        
+      return '<img width="120" height="90" src="' . $finalURL . '" />';
     }
     
     /*
@@ -228,44 +264,48 @@
 		 * Returns HTML for a ribbon bar of videos from a playlist.
 		 */ 
 		public function playlistRibbonBarHTML($playlistFile) {
-		  $videos = self::getVideosFromPlaylistRaw($playlistFile);
+		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-ribbon-bar">';
-		  
+
+      $class = 'video-ribbon-bar-item current';
 		  foreach ($videos as $videoId => $video) {
-		    $html .= '<li class="video-ribbon-bar-item">' .
-		               '<span class="video-ribbon-bar-youtube-url">' . $video['url'] . '</span>' .
+        $html .= '<li class="' . $class . '">' .
+                   '<input type="hidden" class="video-content" value="' . htmlentities(self::carouselVideoHTML("video-carousel-item video-carousel-current-item", $video['url'], $video['title'], $video['description'])) . '" />' . 
 		               '<span class="video-ribbon-bar-title">' . $video['title'] . '</span>' .
 		               '<span class="video-ribbon-bar-image">' . self::generateYouTubeThumbnail($video['url']) . '</span>' .
-		             '</li>';
+                   '</li>';
+        $class = 'video-ribbon-bar-item';
 		  }
 		  
 		  $html .= '</ul>';
 		  return $html;
 		}
+
+    /*
+     * Returns HTML for a single video.
+     */
+    public function carouselVideoHTML($class, $url, $title, $description) {
+      return '<li class="' . $class . '">' .
+        '<span class="video-carousel-youtube">' .
+          self::generateYouTubeEmbed($url) .
+        '</span>' .
+        '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $title . '</h3></span><br />' .
+        '<span class="video-carousel-description"><p>' . $description . '</p></span>' .
+        '</li>';
+    }
 		
 		/* 
 		 * Returns HTML for a carousel of videos from a playlist.
 		 */
 		public function playlistCarouselHTML($playlistFile) {
-		  $videos = self::getVideosFromPlaylistRaw($playlistFile);
+		  $videos = self::getVideosChronological($playlistFile);
 		  $html   = '<ul id="video-carousel">';
 		  
-		  $firstVideo = true;
+      $class = "video-carousel-item video-carousel-current-item";
 		  foreach ($videos as $videoId => $video) {
-		    $class = "video-carousel-item";
-		    if ($firstVideo) {
-		      $firstVideo = false;
-		      $class .= " video-carousel-current-item";
-		    }
-		    
-		    $html .= '<li class="' . $class . '">' .
-		               '<span class="video-carousel-youtube">' .
-                      self::generateYouTubeEmbed($video['url']) . 
-		               '</span><br /><br />' .
-		               '<span class="video-carousel-title"><h3 class="video-carousel-header">' . $video['title'] . '</h3></span><br />' .
-		               '<span class="video-carousel-description"><p>' . $video['description'] . '</p></span>' .
-		             '</li>';
-		  }
+        $html .= self::carouselVideoHTML($class, $video['url'], $video['title'], $video['description']);
+        $class = "video-carousel-item";
+      }
 		  
 		  $html .= '</ul>';
 		  return $html;
