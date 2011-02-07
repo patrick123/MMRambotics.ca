@@ -24,6 +24,26 @@
       return (dirname(__FILE__) . '/db/photos/' . $file);
     }
 
+    /*
+     * Looks up an album file path based on name. 
+     */
+    public function getAlbumPath($albumName) {
+      $data = self::getAlbumsRaw();
+      return $data[$albumName];
+    }
+
+    public function getAlbumsRaw() {
+
+    }
+
+    public function getPhotosFromPlaylistPath($path) {
+
+    }
+
+    public function getDefaultAlbumPath() {
+
+    }
+
   }
 
 ?>

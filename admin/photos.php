@@ -67,8 +67,8 @@
             <td><?php echo $photo["title"]; ?></td>
             <td><a href="<?php echo $photo["url"]; ?>"><?php echo $photo["url"]; ?></a></td>
             <td><?php echo $photo["description"]; ?></td>
-            <td><a href="photos.php?editphoto=<?php echo $photoId; ">&album=<?php echo $_GET["administer"]; ?>">Edit</a></td>
-            <td><a href="photos.php?deletephoto=<?php echo $photoId; ">&album=<?php echo $_GET["administer"]; ?>">Delete</a></td>
+            <td><a href="photos.php?editphoto=<?php echo $photoId; ?>&album=<?php echo $_GET["administer"]; ?>">Edit</a></td>
+            <td><a href="photos.php?deletephoto=<?php echo $photoId; ?>&album=<?php echo $_GET["administer"]; ?>">Delete</a></td>
           </tr>
         <?php
       }
