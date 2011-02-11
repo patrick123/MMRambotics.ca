@@ -2,3 +2,4 @@
 *.psd
 *.psb
 test.php
+.DS_Store
