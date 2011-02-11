@@ -76,6 +76,15 @@ $(document).ready(function() {
     $(this).addClass("current");
   });
 
+  $("#close").click(function() {
+    if ($.lightboxOpen) {
+      $(".video-carousel-youtube").hide();
+      $("#lightbox-container").fadeOut(500);
+      $(".video-carousel-youtube").show(); 
+      $.lightboxOpen = false;
+    }
+  });
+
   $("body").click(function(mouse) {
     var width  = $("#playlist-lightbox").width();
     var c      = $("#playlist-lightbox").offset();
@@ -84,7 +93,7 @@ $(document).ready(function() {
       if ($.lightboxOpen) {
         $(".video-carousel-youtube").hide();
         $("#lightbox-container").fadeOut(500);
-        $(".video-carousel.youtube").show(); // Small hack due to Flash content not fading out.
+        $(".video-carousel-youtube").show(); // Small hack due to Flash content not fading out.
         $.lightboxOpen = false;
       }
     }

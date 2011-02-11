@@ -165,6 +165,19 @@ ul#video-playlists {
       display:none;
     }
 
+div#playlist-close {
+  width:900px;
+  background-color:#555;
+  color:#fff;
+  text-align:right;
+}
+  #close {
+    cursor:pointer;
+    text-decoration:underline;
+    font-weight:bold;
+    margin:5px;
+  }
+
 div#lightbox-container {
   position:absolute;
   top:0px;
@@ -194,7 +207,7 @@ div#lightbox-container {
       background-color:#000;
       padding:0px;
       margin:0px;
-      height:540px;
+      height:520px;
     }
       div#lightbox-container div#playlist-lightbox div#playlist-carousel div#video-carousel {
         margin-left:18px;
