@@ -20,10 +20,11 @@
 				</ul>
 				<br />
 				<a href="http://usfirst.org" title="FIRST Robotics" target="_blank"><img src="http://mmrambotics.ca/images/first-logo.gif" alt="FIRST Robotics" title="FIRST Robotics" width="120" /></a>			
+        <br />
+        <a href="http://usfirst.org" title="Take me to FIRST!" target="_blank" style="color:#fff; font-size:12px;">Take me to FIRST!</a>
 				<br /><br />
-        <span class="st_sharethis" displayText="ShareThis"></span>
 
-      
+             
 			</div><!-- End Sidebar -->
 			
 		  <div id="content">

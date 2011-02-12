@@ -86,11 +86,11 @@ $(document).ready(function() {
   });
 
   $("body").click(function(mouse) {
-    var width  = $("#playlist-lightbox").width();
-    var c      = $("#playlist-lightbox").offset();
-    var height = $("#playlist-lightbox").height();
-    if (mouse.pageX < c.left || mouse.pageX > c.left + width || mouse.pageY < c.top || mouse.pageY > c.top + height) {
-      if ($.lightboxOpen) {
+    if ($.lightBoxOpen) {
+      var width  = $("#playlist-lightbox").width();
+      var c      = $("#playlist-lightbox").offset();
+      var height = $("#playlist-lightbox").height();
+      if (mouse.pageX < c.left || mouse.pageX > c.left + width || mouse.pageY < c.top || mouse.pageY > c.top + height) {
         $(".video-carousel-youtube").hide();
         $("#lightbox-container").fadeOut(500);
         $(".video-carousel-youtube").show(); // Small hack due to Flash content not fading out.
@@ -98,5 +98,7 @@ $(document).ready(function() {
       }
     }
   });
+
+//  footer.initializeFooter();
 
 });
